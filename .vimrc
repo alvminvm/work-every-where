@@ -1,238 +1,211 @@
-set nocompatible                " be iMproved
-filetype off                    " required!
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-"插件
-Bundle 'gmarik/vundle'
-
-" My Bundles here:
+"==========================================
+" Author:  JeremyHe
+" Version: 1.0
+" Email: jeremyhe.cn@gmail.com
+" Blog: http://J-Cn.me
+" Last_modify: 2015-01-23
+" Sections:
+"       -> Initial Plugin 加载插件
+"       -> General Settings 基础设置
+"       -> Display Settings 展示/排版等界面格式设置
+"       -> FileEncode Settings 文件编码设置
+"       -> Others 其它配置
+"       -> HotKey Settings  自定义快捷键
+"       -> FileType Settings  针对文件类型的设置
+"       -> Theme Settings  主题设置
 "
-" original repos on github
+"       -> 插件配置和具体设置在vimrc.bundles中
+"==========================================
+ 
+"==========================================
+" Initial Plugin 加载插件
+"==========================================
 
-
-" vim-scripts repos
-
-
-" non github repos
-
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" 显示相关  
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-"set shortmess=atI   " 启动的时候不显示那个援助乌干达儿童的提示  
-
-"winpos 5 5          " 设定窗口位置  
-
-set lines=40 columns=100    " 设定窗口大小  
-
-set nu              " 显示行号  
-
-set go=             " 不要图形按钮  
-
-"color asmanian2     " 设置背景主题  
-
-"set guifont=Courier_New:h10:cANSI   " 设置字体  
-
-syntax on           " 语法高亮  
-
-autocmd InsertLeave * se nocul  " 用浅色高亮当前行  
-
-autocmd InsertEnter * se cul    " 用浅色高亮当前行  
-
-set ruler           " 显示标尺  
-
-set showcmd         " 输入的命令显示出来，看的清楚些  
-
-"set cmdheight=1     " 命令行（在状态行下）的高度，设置为1  
-
-"set whichwrap+=<,>,h,l   " 允许backspace和光标键跨越行边界(不建议)  
-
-"set scrolloff=3     " 光标移动到buffer的顶部和底部时保持3行距离  
-
-set novisualbell    " 不要闪烁(不明白)  
-
-set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%Y/%m/%d\ -\ %H:%M\")}   "状态行显示的内容  
-
-set laststatus=1    " 启动显示状态行(1),总是显示状态行(2)  
-
-set foldenable      " 允许折叠  
-
-set foldmethod=manual   " 手动折叠  
-
-set foldlevelstart=99
-
-"set background=dark "背景使用黑色 
-
-set nocompatible  "去掉讨厌的有关vi一致性模式，避免以前版本的一些bug和局限  
-
-" 显示中文帮助
-
-if version >= 603
-
-	set helplang=cn
-
-	set encoding=utf-8
-
+" install Vundle bundles 安装Vundle插件管理
+if filereadable(expand("~/bundles.vimrc"))
+  source ~/bundles.vimrc
 endif
 
-" 设置配色方案
 
-"colorscheme murphy
+"==========================================
+" General Settings 基础设置
+"==========================================
 
-"字体 
+" Modify leader 修改leader键
+let mapleader = ','
+let g:mapleader = ','
 
-"if (has("gui_running")) 
+set shortmess = atI       	" 启动的时候不显示那个援助索马里儿童的提示
 
-"   set guifont=Bitstream\ Vera\ Sans\ Mono\ 10 
+syntax on					" Enable Syntax 开启语法高亮
 
-"endif 
+set history = 700			" history 历史存储容量
 
+filetype on					" filetype detect 检测文件类型
 
+filetype indent on			" 针对不同的文件类型采用不同的缩进格式
 
-set fencs=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936
+filetype plugin on			" 允许插件
 
-set termencoding=utf-8
+filetype plugin indent on	" 启动自动补全
 
-set encoding=utf-8
+set autoread          		" 文件修改之后自动载入。
 
-set fileencodings=ucs-bom,utf-8,cp936
+set nobackup				" no backup 取消备份
 
-set fileencoding=utf-8
+" Configure backspace so it acts as it should act
+set backspace=eol,start,indent
+set whichwrap+=<,>,h,l		" 允许backspace和光标键跨越行边界
 
+set viminfo+=!				" 保存全局变量
 
+" 自动补全
+:inoremap ( ()<ESC>i
+:inoremap ) <c-r>=ClosePair(')')<CR>
+:inoremap { {<CR>}<ESC>O
+:inoremap } <c-r>=ClosePair('}')<CR>
+:inoremap [ []<ESC>i
+:inoremap ] <c-r>=ClosePair(']')<CR>
+:inoremap " ""<ESC>i
+:inoremap ' ''<ESC>i
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-"""""新文件标题""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-"新建.c,.h,.sh,.java文件，自动插入文件头 
-
-autocmd BufNewFile *.cpp,*.[ch],*.sh,*.java exec ":call SetTitle()" 
-
-""定义函数SetTitle，自动插入文件头 
-
-func SetTitle() 
-
-	"如果文件类型为.sh文件 
-
-	if &filetype == 'sh' 
-
-		call setline(1,"\#########################################################################") 
-
-		call append(line("."), "\# File Name: ".expand("%")) 
-
-		call append(line(".")+1, "\# Author: JeremyHe") 
-
-		call append(line(".")+2, "\# mail: jeremyhe_cn@gmail.com") 
-
-		call append(line(".")+3, "\# Created Time: ".strftime("%c")) 
-
-		call append(line(".")+4, "\#########################################################################") 
-
-		call append(line(".")+5, "\#!/bin/bash") 
-
-		call append(line(".")+6, "") 
-
-	else 
-
-		call setline(1, "/*************************************************************************") 
-
-		call append(line("."), "     File Name: ".expand("%")) 
-
-		call append(line(".")+1, "   Author: JeremyHe") 
-
-		call append(line(".")+2, "   Mail: jeremyhe.cn@gmail.com") 
-
-		call append(line(".")+3, "   Created Time: ".strftime("%c")) 
-
-		call append(line(".")+4, " ************************************************************************/") 
-
-		call append(line(".")+5, "")
-
+function! ClosePair(char)
+	if getline('.')[col('.') - 1] == a:char
+		return "\<Right>"
+	else
+		return a:char
 	endif
+endfunction
 
-	if &filetype == 'cpp'
 
-		call append(line(".")+6, "#include<iostream>")
+"==========================================
+" Display Settings 展示/排版等界面格式设置
+"==========================================
 
-		call append(line(".")+7, "using namespace std;")
+set ruler					" show ruler 显示标尺
 
-		call append(line(".")+8, "")
+set number					" 显示行号
 
-	endif
+set showcmd					" 在状态栏显示正在输入的命令
 
+set showmode				" 左下角显示当前vim模式
+
+set scrolloff = 7			" 在上下移动光标时，光标的上方或下方至少会保留显示的行数
+
+set showmatch				" 高亮显示匹配的括号
+set matchtime = 2			" 匹配括号高亮的时间（单位是十分之一秒）
+
+set cursorline              " 突出显示当前行
+autocmd InsertLeave * se nocul  " 离开插入模式时取消高亮  
+autocmd InsertEnter * se cul    " 进入插入模式时用浅色高亮当前行  
+
+" statusline settings 状态行显示的内容 
+set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%Y/%m/%d\ -\ %H:%M\")}    
+set laststatus=1    		" 启动显示状态行(1),总是显示状态行(2)  
+
+"设置文内智能搜索提示
+set hlsearch				" 高亮search命中的文本
+set incsearch				" 打开增量搜索模式,随着键入即时搜索
+set ignorecase				" 搜索时忽略大小写
+
+" 代码折叠
+set foldenable				" 允许折叠
+set foldlevel = 99
+set foldmethod = manual		" 折叠方法
+							" manual    手工折叠
+							" indent    使用缩进表示折叠
+							" expr      使用表达式定义折叠
+							" syntax    使用语法定义折叠
+							" diff      对没有更改的文本进行折叠
+							" marker    使用标记进行折叠, 默认标记是 {{{ 和 }}}
+							
+" indent settings 缩进设置
+set smartindent   			" Smart indent
+set autoindent    			" 打开自动缩进
+
+" tab settings tab相关变更
+set tabstop = 4     		" 设置Tab键的宽度
+set shiftwidth = 4  		" 每一次缩进对应的空格数
+set softtabstop = 4 		" 按退格键时可以一次删掉 4 个空格
+set smarttab      			" insert tabs on the start of a line according to shiftwidth, not tabstop
+set noexpandtab				" 不要用空格代替制表符
+set shiftround    			" 缩进时，取整 use multiple of shiftwidth when indenting with '<' and '>'
+
+
+
+"==========================================
+" FileEncode Settings 文件编码,格式
+"==========================================
+
+set encoding = utf-8		" 设置新文件的编码为 UTF-8
+
+set fileencoding = utf-8
+							" 自动判断编码时，依次尝试以下编码：
+set fileencodings = ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
+
+set termencoding = utf-8	" 这句只影响普通模式 (非图形界面) 下的 Vim。
+
+
+
+"==========================================
+" others 其它设置
+"==========================================
+
+autocmd! bufwritepost _vimrc source % 	" vimrc文件修改之后自动加载。 windows。
+autocmd! bufwritepost .vimrc source % 	" vimrc文件修改之后自动加载。 linux。
+
+set completeopt = longest,menu			" 让Vim的补全菜单行为与一般IDE一致(参考VimTip1228)
+
+set wildmenu							" 增强模式中的命令行自动完成操作
+set wildignore = *.o,*~,*.pyc,*.class	" Ignore compiled files 忽略补全以下文件
+
+" 上下左右键的行为 会显示其他信息
+inoremap <expr> <Down>     pumvisible() ? "\<C-n>" : "\<Down>"
+inoremap <expr> <Up>       pumvisible() ? "\<C-p>" : "\<Up>"
+inoremap <expr> <PageDown> pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<PageDown>"
+inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
+
+
+"==========================================
+" HotKey Settings  自定义快捷键设置
+"==========================================
+
+noremap <F1> <Esc>"				" F1 废弃这个键,防止调出系统帮助
+map <F5> :call RunCompile()<CR>	" F5 执行或编译
+map <F12> gg=G					" F12 缩进，格式化代码
+
+func! RunCompile()
+	exec "w"
 	if &filetype == 'c'
-
-		call append(line(".")+6, "#include<stdio.h>")
-
-		call append(line(".")+7, "")
-
+		exec "!g++ % -o %<"
+		exec "! ./%<"
+	elseif &filetype == 'cpp'
+		exec "!g++ % -o %<"
+		exec "! ./%<"
+	elseif &filetype == 'java' 
+		exec "!javac %" 
+		exec "!java %<"
+	elseif &filetype == 'sh'
+		:!./%
 	endif
+endfunc
 
-	"新建文件后，自动定位到文件末尾
+"nmap <BS> i<BS> 			" 退格键直接进入插入模式，并删除	
 
-	autocmd BufNewFile * normal G
+" TODO： 加上windows系统的
+map <silent> <leader>ee :e ~/.vimrc<cr>	",ee 快速打开配置文件
 
-endfunc 
+nmap <leader>w :w!<cr>		" ,w 快速保存
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-"键盘命令
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-"映射;到:
-nmap ; :
-
-"normal模式下空格键进入插入模式
-nmap <Space> a
-
-nmap <leader>w :w!<cr>
-
-nmap <leader>f :find<cr>
-
-"输入,ee可快速打开配置文件
-map <silent> <leader>ee :e ~/.vimrc<cr>
-
-" 映射全选+复制 ctrl+a
-
+" Copy All 映射全选+复制 ctrl+a
 map <C-A> ggVG"+Y
-
 map! <C-A> <Esc>ggVG"+Y
 
-map <F12> gg=G
-
-" 选中状态下 Ctrl+c 复制
-
-vmap <C-c> "+y
-
-"Ctrl+v 粘贴剪贴板内容
-imap <C-v> <Esc>"+p<Esc>a
+vmap <C-c> "+y				" Copy 选中状态下 Ctrl+c 复制
+imap <C-v> <Esc>"+p<Esc>a	" Past At Insert Mode 插入模式下Ctrl+v 粘贴剪贴板内容
 
 "插入模式下Ctrl+B插入<br>
 imap <C-b> <br>
-
-"去空行  
-
-nnoremap <F2> :g/^\s*$/d<CR> 
-
-"比较文件  
-
-nnoremap <C-F2> :vert diffsplit 
-
-"新建标签  
-
-map <M-F2> :tabnew<CR>  
-
-"列出当前目录文件  
-
-map <F3> :tabnew .<CR>  
-
-"打开树状文件目录  
-
-map <C-F3> \be  
 
 "上下移动指定行
 map <M-j> ddp
@@ -240,376 +213,122 @@ map <M-k> ddkP
 
 "C，C++ 按F5编译运行
 
-map <F5> :call CompileRunGcc()<CR>
 
-func! CompileRunGcc()
 
-	exec "w"
 
+" Smart way to move between windows 分屏窗口移动
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+
+" Go to home and end using capitalized directions 使用H和L跳到行首和行尾，原本H和L的功能废弃
+noremap H ^
+noremap L $
+
+nnoremap ; :				" 分号快速进入命令模式
+
+" tab navigate 标签页导航相关操作
+map <leader>th :tabfirst<cr>
+map <leader>tl :tablast<cr>
+
+map <leader>tj :tabnext<cr>
+map <leader>tk :tabprev<cr>
+map <leader>tn :tabnext<cr>
+map <leader>tp :tabprev<cr>
+
+map <leader>te :tabedit<cr>
+map <leader>td :tabclose<cr>
+map <leader>tm :tabm<cr>
+
+" normal模式下切换到确切的tab
+noremap <leader>1 1gt
+noremap <leader>2 2gt
+noremap <leader>3 3gt
+noremap <leader>4 4gt
+noremap <leader>5 5gt
+noremap <leader>6 6gt
+noremap <leader>7 7gt
+noremap <leader>8 8gt
+noremap <leader>9 9gt
+
+" Toggles between the active and last active tab 在当前tab页和前一个tab页之间快速切换
+let g:last_active_tab = 1
+nnoremap <silent> <leader>tt :execute 'tabnext ' . g:last_active_tab<cr>
+vnoremap <silent> <leader>tt :execute 'tabnext ' . g:last_active_tab<cr>
+autocmd TabLeave * let g:last_active_tab = tabpagenr()
+
+" using Ctrl+t for tabnew  新建tab标签页
+nnoremap <C-t> :tabnew<CR>	
+inoremap <C-t> <Esc>:tabnew<CR>
+
+
+
+"==========================================
+" FileType Settings  与文件类型相关的设置
+"==========================================
+
+" 定义函数AutoSetFileHead，自动插入文件头
+autocmd BufNewFile *.cpp,*.[ch],*.java,*.sh,*.py exec ":call AutoSetFileHead()"
+function! AutoSetFileHead()
+	" cpp 文件
+	if &filetype == 'cpp'
+		call setline(1, "#include<iostream>")
+		call append(line(".")+1, "using namespace std;")
+		call append(line(".")+2, "")
+	endif
+	
+	" c 文件
 	if &filetype == 'c'
-
-		exec "!g++ % -o %<"
-
-		exec "! ./%<"
-
-	elseif &filetype == 'cpp'
-
-		exec "!g++ % -o %<"
-
-		exec "! ./%<"
-
-	elseif &filetype == 'java' 
-
-		exec "!javac %" 
-
-		exec "!java %<"
-
-	elseif &filetype == 'sh'
-
-		:!./%
-
+		call setline(1, "#include<stdio.h>")
+		call append(line(".")+1, "")
 	endif
 
-endfunc
-
-"C,C++的调试
-
-map <F8> :call Rungdb()<CR>
-
-func! Rungdb()
-
-	exec "w"
-
-	exec "!g++ % -g -o %<"
-
-	exec "!gdb ./%<"
-
-endfunc
-
-"退格键直接进入插入模式，并删除
-nmap <BS> i<BS> 
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-""实用设置
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" 设置当文件被改动时自动载入
-
-set autoread
-
-" quickfix模式
-
-autocmd FileType c,cpp map <buffer> <leader><space> :w<cr>:make<cr>
-
-"代码补全 
-
-set completeopt=preview,menu 
-
-"允许插件  
-
-filetype plugin on
-
-"共享剪贴板  
-
-set clipboard+=unnamed 
-
-"make 运行
-
-:set makeprg=g++\ -Wall\ \ %
-
-"自动保存
-
-set autowrite
-
-set ruler                   " 打开状态栏标尺
-
-set cursorline              " 突出显示当前行
-
-set magic                   " 设置魔术
-
-set guioptions+=T           " 隐藏工具栏
-
-set guioptions+=m           " 隐藏菜单栏
-
-"set statusline=\ %<%F[%1*%M%*%n%R%H]%=\ %y\ %0(%{&fileformat}\ %{&encoding}\ %c:%l/%L%)\
-
-" 设置在状态行显示的信息
-
-set foldcolumn=0
-
-set foldmethod=indent 
-
-set foldlevel=3 
-
-set foldenable              " 开始折叠
-
-" 不要使用vi的键盘模式，而是vim自己的
-
-set nocompatible
-
-" 语法高亮
-
-set syntax=on
-
-" 去掉输入错误的提示声音
-
-set noeb
-
-" 在处理未保存或只读文件的时候，弹出确认
-
-set confirm
-
-" 自动缩进
-
-set autoindent
-
-set cindent
-
-" Tab键的宽度
-
-set tabstop=4
-
-" 统一缩进为4
-
-set softtabstop=4
-
-set shiftwidth=4
-
-" 不要用空格代替制表符
-
-set noexpandtab
-
-" 在行和段开始处使用制表符
-
-set smarttab
-
-" 显示行号
-
-set number
-
-" 历史记录数
-
-set history=1000
-
-"禁止生成临时文件
-
-set nobackup
-
-set noswapfile
-
-"搜索忽略大小写
-
-set ignorecase
-
-"搜索逐字符高亮
-
-set hlsearch
-
-set incsearch
-
-"行内替换
-
-set gdefault
-
-"编码设置
-
-set enc=utf-8
-
-set fencs=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936
-
-"语言设置
-
-set langmenu=zh_CN.UTF-8
-
-set helplang=cn
-
-" 我的状态行显示的内容（包括文件类型和解码）
-
-"set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
-
-"set statusline=[%F]%y%r%m%*%=[Line:%l/%L,Column:%c][%p%%]
-
-" 总是显示状态行
-
-set laststatus=2
-
-" 命令行（在状态行下）的高度，默认为1，这里是2
-
-set cmdheight=2
-
-" 侦测文件类型
-
-filetype on
-
-" 载入文件类型插件
-
-filetype plugin on
-
-" 为特定文件类型载入相关缩进文件
-
-filetype indent on
-
-" 保存全局变量
-
-set viminfo+=!
-
-" 带有如下符号的单词不要被换行分割
-
-set iskeyword+=_,$,@,%,#,-
-
-" 字符间插入的像素行数目
-
-set linespace=0
-
-" 增强模式中的命令行自动完成操作
-
-set wildmenu
-
-" 使回格键（backspace）正常处理indent, eol, start等
-
-set backspace=2
-
-" 允许backspace和光标键跨越行边界
-
-set whichwrap+=<,>,h,l
-
-" 可以在buffer的任何地方使用鼠标（类似office中在工作区双击鼠标定位）
-
-set mouse=a
-
-set selection=exclusive
-
-set selectmode=mouse,key
-
-" 通过使用: commands命令，告诉我们文件的哪一行被改变过
-
-set report=0
-
-" 在被分割的窗口间显示空白，便于阅读
-
-set fillchars=vert:\ ,stl:\ ,stlnc:\
-
-" 高亮显示匹配的括号
-
-set showmatch
-
-" 匹配括号高亮的时间（单位是十分之一秒）
-
-set matchtime=1
-
-" 光标移动到buffer的顶部和底部时保持3行距离
-
-set scrolloff=3
-
-" 为C程序提供自动缩进
-
-set smartindent
-
-" 高亮显示普通txt文件（需要txt.vim脚本）
-
-au BufRead,BufNewFile *  setfiletype txt
-
-"自动补全
-
-:inoremap ( ()<ESC>i
-
-:inoremap ) <c-r>=ClosePair(')')<CR>
-
-:inoremap { {<CR>}<ESC>O
-
-:inoremap } <c-r>=ClosePair('}')<CR>
-
-:inoremap [ []<ESC>i
-
-:inoremap ] <c-r>=ClosePair(']')<CR>
-
-:inoremap " ""<ESC>i
-
-:inoremap ' ''<ESC>i
-
-function! ClosePair(char)
-
-	if getline('.')[col('.') - 1] == a:char
-
-		return "\<Right>"
-
-	else
-
-		return a:char
-
+    " 如果文件类型为.sh文件
+    if &filetype == 'sh'
+        call setline(1, "\#!/bin/bash")
+    endif
+
+    " 如果文件类型为python
+    if &filetype == 'python'
+        call setline(1, "\#!/usr/bin/env python")
+        call append(1, "\# encoding: utf-8")
+    endif
+    
+    
+    " Add Author Info 添加作者信息
+    if &filetype == 'sh' 
+		call append(line("."), "")
+		call append(line(".")+1, "")
+		call append(line(".")+2, "\#########################################################################") 
+		call append(line(".")+3, "\# File Name: ".expand("%"))
+		call append(line(".")+4, "\# Author: JeremyHe")
+		call append(line(".")+5, "\# mail: jeremyhe_cn@gmail.com")
+		call append(line(".")+6, "\# Created Time: ".strftime("%c"))
+		call append(line(".")+7, "\#########################################################################")
+	else 
+		call append(line("."), "")
+		call append(line(".")+1, "")
+		call append(line(".")+2, "/*************************************************************************")
+		call append(line(".")+3, "     File Name: ".expand("%"))
+		call append(line(".")+4, "   Author: JeremyHe")
+		call append(line(".")+5, "   Mail: jeremyhe.cn@gmail.com")
+		call append(line(".")+6, "   Created Time: ".strftime("%c"))
+		call append(line(".")+7, " ************************************************************************/")
 	endif
 
-endfunction
+    normal G
+    normal o
+    normal o
+endfunc
 
-filetype plugin indent on 
-
-"打开文件类型检测, 加了这句才可以用智能补全
-
-set completeopt=longest,menu
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" CTags的设定  
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-let Tlist_Sort_Type = "name"    " 按照名称排序  
-
-let Tlist_Use_Right_Window = 1  " 在右侧显示窗口  
-
-let Tlist_Compart_Format = 1    " 压缩方式  
-
-let Tlist_Exist_OnlyWindow = 1  " 如果只有一个buffer，kill窗口也kill掉buffer  
-
-let Tlist_File_Fold_Auto_Close = 0  " 不要关闭其他文件的tags  
-
-let Tlist_Enable_Fold_Column = 0    " 不要显示折叠树  
-
-autocmd FileType java set tags+=D:\tools\java\tags  
-
-"autocmd FileType h,cpp,cc,c set tags+=D:\tools\cpp\tags  
-
-"let Tlist_Show_One_File=1            "不同时显示多个文件的tag，只显示当前文件的
-
-"设置tags  
-
-set tags=tags  
-
-"set autochdir 
+" F10 to run python script
+nnoremap <buffer> <F10> :exec '!python' shellescape(@%, 1)<cr>
 
 
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"==========================================
+" Theme Settings  主题设置
+"==========================================
 
-"其他东东
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-"默认打开Taglist 
-
-let Tlist_Auto_Open=1 
-
-"""""""""""""""""""""""""""""" 
-
-" Tag list (ctags) 
-
-"""""""""""""""""""""""""""""""" 
-
-let Tlist_Ctags_Cmd = '/usr/bin/ctags' 
-
-let Tlist_Show_One_File = 1 "不同时显示多个文件的tag，只显示当前文件的 
-
-let Tlist_Exit_OnlyWindow = 1 "如果taglist窗口是最后一个窗口，则退出vim 
-
-let Tlist_Use_Right_Window = 1 "在右侧窗口中显示taglist窗口
-
-" minibufexpl插件的一般设置
-
-let g:miniBufExplMapWindowNavVim = 1
-
-let g:miniBufExplMapWindowNavArrows = 1
-
-let g:miniBufExplMapCTabSwitchBufs = 1
-let g:miniBufExplModSelTarget = 1
