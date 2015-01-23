@@ -40,6 +40,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 
 " ############ Outline 标签导航 ###########
 Bundle 'majutsushi/tagbar'
+map <leader>o :TagbarToggle<CR>
 let g:tagbar_autofocus = 1	
 
 " vim-scripts repos

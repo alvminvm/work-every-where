@@ -252,7 +252,7 @@ map <leader>tn :tabnext<cr>
 map <leader>tp :tabprev<cr>
 
 map <leader>te :tabedit<cr>
-map <leader>td :tabclose<cr>
+map <leader>tc :tabclose<cr>
 map <leader>tm :tabm<cr>
 
 " normal模式下切换到确切的tab
