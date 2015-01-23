@@ -1,9 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/home/jeremyhe'
-let g:netrw_dirhist_2='/home'
-let g:netrw_dirhist_3='/'
-let g:netrw_dirhist_4='/home/jeremyhe/J-Cn.me/source'
-let g:netrw_dirhist_5='/home/jeremyhe/J-Cn.me/source/_posts'
-let g:netrw_dirhist_6='/home/jeremyhe/git/docs'
-let g:netrw_dirhist_7='/home/jeremyhe/git/docs/卡牛接口文档'
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/jeremyhe/git/MyMoneySms/MyMoneySms/src/com'
+let g:netrw_dirhist_2='/home/jeremyhe/git/MyMoneySms/MyMoneySms/src/com/mymoney'
+let g:netrw_dirhist_3='/home/jeremyhe/git/MyMoneySms/MyMoneySms/src/com/mymoney/core'
+let g:netrw_dirhist_4='/home/jeremyhe/git/MyMoneySms/MyMoneySms/src/com/mymoney/core/web'
