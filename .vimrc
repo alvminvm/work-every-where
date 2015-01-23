@@ -32,14 +32,14 @@ endif
 "==========================================
 
 " Modify leader 修改leader键
-let mapleader = ','
-let g:mapleader = ','
+let mapleader=','
+let g:mapleader=','
 
-set shortmess = atI       	" 启动的时候不显示那个援助索马里儿童的提示
+set shortmess=atI       	" 启动的时候不显示那个援助索马里儿童的提示
 
 syntax on					" Enable Syntax 开启语法高亮
 
-set history = 700			" history 历史存储容量
+set history=700			" history 历史存储容量
 
 filetype on					" filetype detect 检测文件类型
 
@@ -90,10 +90,10 @@ set showcmd					" 在状态栏显示正在输入的命令
 
 set showmode				" 左下角显示当前vim模式
 
-set scrolloff = 7			" 在上下移动光标时，光标的上方或下方至少会保留显示的行数
+set scrolloff=7			" 在上下移动光标时，光标的上方或下方至少会保留显示的行数
 
 set showmatch				" 高亮显示匹配的括号
-set matchtime = 2			" 匹配括号高亮的时间（单位是十分之一秒）
+set matchtime=2			" 匹配括号高亮的时间（单位是十分之一秒）
 
 set cursorline              " 突出显示当前行
 autocmd InsertLeave * se nocul  " 离开插入模式时取消高亮  
@@ -110,8 +110,8 @@ set ignorecase				" 搜索时忽略大小写
 
 " 代码折叠
 set foldenable				" 允许折叠
-set foldlevel = 99
-set foldmethod = manual		" 折叠方法
+set foldlevel=99
+set foldmethod=manual		" 折叠方法
 							" manual    手工折叠
 							" indent    使用缩进表示折叠
 							" expr      使用表达式定义折叠
@@ -124,9 +124,9 @@ set smartindent   			" Smart indent
 set autoindent    			" 打开自动缩进
 
 " tab settings tab相关变更
-set tabstop = 4     		" 设置Tab键的宽度
-set shiftwidth = 4  		" 每一次缩进对应的空格数
-set softtabstop = 4 		" 按退格键时可以一次删掉 4 个空格
+set tabstop=4     		" 设置Tab键的宽度
+set shiftwidth=4  		" 每一次缩进对应的空格数
+set softtabstop=4 		" 按退格键时可以一次删掉 4 个空格
 set smarttab      			" insert tabs on the start of a line according to shiftwidth, not tabstop
 set noexpandtab				" 不要用空格代替制表符
 set shiftround    			" 缩进时，取整 use multiple of shiftwidth when indenting with '<' and '>'
@@ -137,13 +137,13 @@ set shiftround    			" 缩进时，取整 use multiple of shiftwidth when indent
 " FileEncode Settings 文件编码,格式
 "==========================================
 
-set encoding = utf-8		" 设置新文件的编码为 UTF-8
+set encoding=utf-8		" 设置新文件的编码为 UTF-8
 
-set fileencoding = utf-8
+set fileencoding=utf-8
 							" 自动判断编码时，依次尝试以下编码：
-set fileencodings = ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
+set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 
-set termencoding = utf-8	" 这句只影响普通模式 (非图形界面) 下的 Vim。
+set termencoding=utf-8	" 这句只影响普通模式 (非图形界面) 下的 Vim。
 
 
 
@@ -154,10 +154,10 @@ set termencoding = utf-8	" 这句只影响普通模式 (非图形界面) 下的 
 autocmd! bufwritepost _vimrc source % 	" vimrc文件修改之后自动加载。 windows。
 autocmd! bufwritepost .vimrc source % 	" vimrc文件修改之后自动加载。 linux。
 
-set completeopt = longest,menu			" 让Vim的补全菜单行为与一般IDE一致(参考VimTip1228)
+set completeopt=longest,menu			" 让Vim的补全菜单行为与一般IDE一致(参考VimTip1228)
 
 set wildmenu							" 增强模式中的命令行自动完成操作
-set wildignore = *.o,*~,*.pyc,*.class	" Ignore compiled files 忽略补全以下文件
+set wildignore=*.o,*~,*.pyc,*.class	" Ignore compiled files 忽略补全以下文件
 
 " 上下左右键的行为 会显示其他信息
 inoremap <expr> <Down>     pumvisible() ? "\<C-n>" : "\<Down>"
@@ -170,9 +170,17 @@ inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
 " HotKey Settings  自定义快捷键设置
 "==========================================
 
-noremap <F1> <Esc>"				" F1 废弃这个键,防止调出系统帮助
-map <F5> :call RunCompile()<CR>	" F5 执行或编译
-map <F12> gg=G					" F12 缩进，格式化代码
+" F1 废弃这个键,防止调出系统帮助
+noremap <F1> <Esc>"				
+
+" F5 执行或编译
+map <F5> :call RunCompile()<CR>	
+
+" F9 Outline 
+nmap <F9> :TagbarToggle<CR>
+
+" F12 缩进，格式化代码
+map <F12> gg=G					
 
 func! RunCompile()
 	exec "w"
@@ -190,19 +198,24 @@ func! RunCompile()
 	endif
 endfunc
 
-"nmap <BS> i<BS> 			" 退格键直接进入插入模式，并删除	
+" 退格键直接进入插入模式，并删除
+nmap <BS> i<BS> 				
 
 " TODO： 加上windows系统的
-map <silent> <leader>ee :e ~/.vimrc<cr>	",ee 快速打开配置文件
+",ee 快速打开配置文件
+map <silent> <leader>ee :e ~/.vimrc<cr>	
 
-nmap <leader>w :w!<cr>		" ,w 快速保存
+" ,w 快速保存
+nmap <leader>w :w!<cr>		
 
 " Copy All 映射全选+复制 ctrl+a
 map <C-A> ggVG"+Y
 map! <C-A> <Esc>ggVG"+Y
 
-vmap <C-c> "+y				" Copy 选中状态下 Ctrl+c 复制
-imap <C-v> <Esc>"+p<Esc>a	" Past At Insert Mode 插入模式下Ctrl+v 粘贴剪贴板内容
+" Copy 选中状态下 Ctrl+c 复制
+vmap <C-c> "+y				
+" Past At Insert Mode 插入模式下Ctrl+v 粘贴剪贴板内容
+imap <C-v> <Esc>"+p<Esc>a	
 
 "插入模式下Ctrl+B插入<br>
 imap <C-b> <br>
@@ -226,7 +239,8 @@ map <C-l> <C-W>l
 noremap H ^
 noremap L $
 
-nnoremap ; :				" 分号快速进入命令模式
+" 分号快速进入命令模式
+nnoremap ; :
 
 " tab navigate 标签页导航相关操作
 map <leader>th :tabfirst<cr>
@@ -253,10 +267,10 @@ noremap <leader>8 8gt
 noremap <leader>9 9gt
 
 " Toggles between the active and last active tab 在当前tab页和前一个tab页之间快速切换
-let g:last_active_tab = 1
+let g:last_active_tab=1
 nnoremap <silent> <leader>tt :execute 'tabnext ' . g:last_active_tab<cr>
 vnoremap <silent> <leader>tt :execute 'tabnext ' . g:last_active_tab<cr>
-autocmd TabLeave * let g:last_active_tab = tabpagenr()
+autocmd TabLeave * let g:last_active_tab=tabpagenr()
 
 " using Ctrl+t for tabnew  新建tab标签页
 nnoremap <C-t> :tabnew<CR>	

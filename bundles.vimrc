@@ -25,9 +25,22 @@ Bundle 'gmarik/vundle'
 
 
 " My Bundles here:
-"
-" original repos on github
 
+" original repos on github
+" ############# 目录导航 ###########
+" ,n 打开目录
+" s/v 分屏打开文件
+" 当只剩下目录窗口，则自动退出
+Bundle 'scrooloose/nerdtree'
+map <leader>n :NERDTreeToggle<CR>
+let g:NERDTreeMapOpenSplit = 's'
+let g:NERDTreeMapOpenVSplit = 'v'
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | end
+
+
+" ############ Outline 标签导航 ###########
+Bundle 'majutsushi/tagbar'
+let g:tagbar_autofocus = 1	
 
 " vim-scripts repos
 
