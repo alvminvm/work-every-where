@@ -40,8 +40,38 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 
 " ############ Outline 标签导航 ###########
 Bundle 'majutsushi/tagbar'
-map <leader>o :TagbarToggle<CR>
 let g:tagbar_autofocus = 1	
+
+" ########### Super Tab 采用Tab键自动补全 #####
+Bundle 'ervandew/supertab'	
+
+
+" ########## ctrlp 文件搜索 ######
+Bundle 'kien/ctrlp.vim'
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
+"let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ }
+"  \ 'link': 'some_bad_symbolic_links',
+
+
+" ########## airline 状态栏增强 ########
+Bundle "bling/vim-airline"
+
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+
+" unicode symbols
+let g:airline_left_sep = '»'
+let g:airline_right_sep = '«'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '⎇'
+
 
 " vim-scripts repos
 
