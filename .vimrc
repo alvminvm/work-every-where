@@ -54,6 +54,8 @@ set autoread          		" 文件修改之后自动载入。
 
 set nobackup				" no backup 取消备份
 
+set noswapfile				" 关闭交换文件
+
 " Configure backspace so it acts as it should act
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l		" 允许backspace和光标键跨越行边界
@@ -84,6 +86,18 @@ endfunction
 "==========================================
 
 set t_Co=256				" force Vim into 256 color mode 强制使用256颜色，保证在终端中能够正常显示
+
+winpos 400 100				" 设置启动时的位置
+
+set lines=50				" 设置启动时默认行数
+
+set co=170					" 设置启动时默认列数
+
+if has('gui')
+	set guioptions-=T		" GUI隐藏工具栏
+endif
+
+" TODO: 启动时默认窗口大小
 
 set ruler					" show ruler 显示标尺
 
