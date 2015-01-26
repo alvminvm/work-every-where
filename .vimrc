@@ -17,6 +17,10 @@
 "       -> 插件配置和具体设置在vimrc.bundles中
 "==========================================
  
+" Modify leader 修改leader键
+let mapleader=','
+let g:mapleader=','
+
 "==========================================
 " Initial Plugin 加载插件
 "==========================================
@@ -31,9 +35,6 @@ endif
 " General Settings 基础设置
 "==========================================
 
-" Modify leader 修改leader键
-let mapleader=','
-let g:mapleader=','
 
 set shortmess=atI       	" 启动的时候不显示那个援助索马里儿童的提示
 
@@ -82,6 +83,8 @@ endfunction
 " Display Settings 展示/排版等界面格式设置
 "==========================================
 
+set t_Co=256				" force Vim into 256 color mode 强制使用256颜色，保证在终端中能够正常显示
+
 set ruler					" show ruler 显示标尺
 
 set number					" 显示行号
@@ -100,8 +103,8 @@ autocmd InsertLeave * se nocul  " 离开插入模式时取消高亮
 autocmd InsertEnter * se cul    " 进入插入模式时用浅色高亮当前行  
 
 " statusline settings 状态行显示的内容 
-set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%Y/%m/%d\ -\ %H:%M\")}    
-set laststatus=1    		" 启动显示状态行(1),总是显示状态行(2)  
+"set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%Y/%m/%d\ -\ %H:%M\")}    
+set laststatus=2    		" 启动显示状态行(1),总是显示状态行(2)  
 
 "设置文内智能搜索提示
 set hlsearch				" 高亮search命中的文本
@@ -207,6 +210,9 @@ map <silent> <leader>ee :e ~/.vimrc<cr>
 
 " ,w 快速保存
 nmap <leader>w :w!<cr>		
+
+" ,q 快速退出
+nmap <leader>q :q!<cr>		
 
 " Copy All 映射全选+复制 ctrl+a
 map <C-A> ggVG"+Y
