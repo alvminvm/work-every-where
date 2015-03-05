@@ -7,7 +7,7 @@
 ;;;;;;  el-get-cd el-get-reinstall el-get-remove el-get-self-update
 ;;;;;;  el-get-update-packages-of-type el-get-update-all el-get-update
 ;;;;;;  el-get-install el-get-version) "el-get/el-get" "el-get/el-get.el"
-;;;;;;  (21725 45284 0 0))
+;;;;;;  (21752 21921 662101 613000))
 ;;; Generated autoloads from el-get/el-get.el
 
 (autoload 'el-get-version "el-get/el-get" "\
@@ -46,7 +46,7 @@ Update el-get itself.  The standard recipe takes care of reloading the code.
 (autoload 'el-get-remove "el-get/el-get" "\
 Remove any PACKAGE that is know to be installed or required.
 
-\(fn PACKAGE &optional PACKAGE-STATUS-ALIST)" t nil)
+\(fn PACKAGE)" t nil)
 
 (autoload 'el-get-reinstall "el-get/el-get" "\
 Remove PACKAGE and then install it again.
@@ -67,7 +67,7 @@ entry which is not a symbol and is not already a known recipe.
 (autoload 'el-get-checksum "el-get/el-get" "\
 Compute the checksum of the given package, and put it in the kill-ring
 
-\(fn PACKAGE &optional PACKAGE-STATUS-ALIST)" t nil)
+\(fn PACKAGE)" t nil)
 
 (autoload 'el-get-self-checksum "el-get/el-get" "\
 Compute the checksum of the running version of el-get itself.
@@ -107,8 +107,8 @@ already installed packages is considered.
 ;;;***
 
 ;;;### (autoloads (el-get-bundle! el-get-bundle el-get-bundle-el-get)
-;;;;;;  "el-get/el-get-bundle" "el-get/el-get-bundle.el" (21725 45284
-;;;;;;  0 0))
+;;;;;;  "el-get/el-get-bundle" "el-get/el-get-bundle.el" (21752 21921
+;;;;;;  658101 613000))
 ;;; Generated autoloads from el-get/el-get-bundle.el
 
 (autoload 'el-get-bundle-el-get "el-get/el-get-bundle" "\
@@ -158,7 +158,7 @@ required.
 ;;;***
 
 ;;;### (autoloads (el-get-list-packages) "el-get/el-get-list-packages"
-;;;;;;  "el-get/el-get-list-packages.el" (21725 45284 0 0))
+;;;;;;  "el-get/el-get-list-packages.el" (21752 21921 662101 613000))
 ;;; Generated autoloads from el-get/el-get-list-packages.el
 
 (autoload 'el-get-list-packages "el-get/el-get-list-packages" "\
@@ -169,7 +169,7 @@ Display a list of packages.
 ;;;***
 
 ;;;### (autoloads (yas-global-mode yas-minor-mode) "yasnippet/yasnippet"
-;;;;;;  "yasnippet/yasnippet.el" (21725 47889 0 0))
+;;;;;;  "yasnippet/yasnippet.el" (21752 22604 654104 191000))
 ;;; Generated autoloads from yasnippet/yasnippet.el
 
 (autoload 'yas-minor-mode "yasnippet/yasnippet" "\
@@ -216,7 +216,7 @@ See `yas-minor-mode' for more information on Yas minor mode.
 ;;;;;;  "el-get/el-get-dependencies.el" "el-get/el-get-install.el"
 ;;;;;;  "el-get/el-get-methods.el" "el-get/el-get-notify.el" "el-get/el-get-recipes.el"
 ;;;;;;  "el-get/el-get-status.el" "yasnippet/yasnippet-debug.el"
-;;;;;;  "yasnippet/yasnippet-tests.el") (21725 47900 355802 900000))
+;;;;;;  "yasnippet/yasnippet-tests.el") (21752 22629 178040 157000))
 
 ;;;***
 
