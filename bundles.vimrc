@@ -86,5 +86,8 @@ map  N <Plug>(easymotion-prev)
 let g:EasyMotion_smartcase = 1
 
 
+" ######### markdown table support ###########
+Plugin 'dhruvasagar/vim-table-mode'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
