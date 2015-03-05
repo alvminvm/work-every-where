@@ -14,14 +14,28 @@
 ;; use y/n instead of yes/no
 (fset 'yes-or-no-p 'y-or-n-p)
 
-;; display time
+;; don't create *~ file
+(setq make-backup-files nil)
+
+;; 显示时间 display time
 (display-time-mode 1)
 (setq display-time-24hr-format t)
 
-;; show column number on status bar
+;; 移除工具栏 remove tool bar
+(tool-bar-mode nil)
+
+;; 高亮当前行 high light current line
+(global-hl-line-mode 1)
+
+;; 启动时的大小和屏幕中的位置
+(setq default-frame-alist
+     '((height . 35)(width . 100)(menuber-lines . 20)(tool-bar-lines . 0)))
+
+;; 状态栏显示列号 show column number on status bar
 (column-number-mode t)
 
-
+;; 显示左侧的行号 show line num on the left
+(global-linum-mode t)
 
 
 (provide 'init-common)
