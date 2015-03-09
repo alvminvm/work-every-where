@@ -37,5 +37,7 @@
 ;; 显示左侧的行号 show line num on the left
 (global-linum-mode t)
 
+;; C-l映射为goto-line
+(global-set-key "\C-xl" 'goto-line)
 
 (provide 'init-common)

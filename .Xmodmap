@@ -1,0 +1,9 @@
+ !
+ ! Swap Caps_Lock and Alter_R
+ !
+ remove Lock = Caps_Lock
+ remove Mod1 = Alt_R
+ keysym Alt_R = Caps_Lock
+ keysym Caps_Lock = Alt_R
+ add Lock = Caps_Lock
+ add Mod1 = Alt_R
