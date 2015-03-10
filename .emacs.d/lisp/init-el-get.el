@@ -18,7 +18,7 @@
 
 ;; 插件 package
 (el-get-bundle yasnippet)
-
+(el-get-bundle auto-complete)
 
 ;; (el-get 'sync)
 (provide 'init-el-get)

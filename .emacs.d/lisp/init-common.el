@@ -37,7 +37,21 @@
 ;; 显示左侧的行号 show line num on the left
 (global-linum-mode t)
 
-;; C-l映射为goto-line
-(global-set-key "\C-xl" 'goto-line)
+;;自动断行，每行80个字符
+(add-hook 'message-mode-hook (lambda ()
+(setq fill-column 80)
+(turn-on-auto-fill)))
+
+;;显示细条光标
+(setq-default cursor-type 'bar)   
+
+;;显示文件标题
+(setq frame-title-format "emacs@%b")    
+
+;; ----------------- 全局按键设定 -------------------
+;;撤销
+(global-set-key (kbd "C-u") 'undo)   
+
+
 
 (provide 'init-common)
