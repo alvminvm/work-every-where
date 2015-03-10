@@ -19,6 +19,7 @@
 (require 'init-useful-function)
 (require 'init-ace-jump)
 (require 'init-yasnippet)
+(require 'auto-complete-config)
 
 (provide 'init)
 
