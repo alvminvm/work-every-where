@@ -50,8 +50,10 @@
 
 ;; ----------------- 全局按键设定 -------------------
 ;;撤销
-(global-set-key (kbd "C-u") 'undo)   
+(global-set-key (kbd "C-u") 'undo)
 
-
+;; 采用smex代替原来的M-x命令   
+(global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
 (provide 'init-common)

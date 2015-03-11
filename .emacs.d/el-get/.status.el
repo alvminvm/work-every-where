@@ -34,6 +34,11 @@
 	(:name fuzzy :website "https://github.com/auto-complete/fuzzy-el" :description "Fuzzy matching utilities for GNU Emacs" :type github :pkgname "auto-complete/fuzzy-el"))
  (popup status "installed" recipe
 	(:name popup :website "https://github.com/auto-complete/popup-el" :description "Visual Popup Interface Library for Emacs" :type github :submodule nil :pkgname "auto-complete/popup-el"))
+ (smex status "installed" recipe
+       (:name smex :after nil :features
+	      (smex)
+	      :description "M-x interface with Ido-style fuzzy matching." :type github :pkgname "nonsequitur/smex" :post-init
+	      (smex-initialize)))
  (switch-window status "installed" recipe
 		(:name switch-window :after nil :features
 		       (switch-window)
