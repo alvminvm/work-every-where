@@ -34,6 +34,10 @@
 	(:name fuzzy :website "https://github.com/auto-complete/fuzzy-el" :description "Fuzzy matching utilities for GNU Emacs" :type github :pkgname "auto-complete/fuzzy-el"))
  (popup status "installed" recipe
 	(:name popup :website "https://github.com/auto-complete/popup-el" :description "Visual Popup Interface Library for Emacs" :type github :submodule nil :pkgname "auto-complete/popup-el"))
+ (switch-window status "installed" recipe
+		(:name switch-window :after nil :features
+		       (switch-window)
+		       :description "A *visual* way to choose a window to switch to" :type github :pkgname "dimitri/switch-window"))
  (tabbar status "installed" recipe
 	 (:name tabbar :after nil :description "Display a tab bar in the header line." :type github :pkgname "dholm/tabbar" :lazy t))
  (yasnippet status "installed" recipe

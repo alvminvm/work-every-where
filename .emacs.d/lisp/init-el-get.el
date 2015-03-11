@@ -20,6 +20,7 @@
 (el-get-bundle yasnippet)
 (el-get-bundle auto-complete)
 (el-get-bundle tabbar)
+(el-get-bundle switch-window)
 
 ;; (el-get 'sync)
 (provide 'init-el-get)
