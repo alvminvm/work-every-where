@@ -5,7 +5,7 @@
 
 ;;;### (autoloads (global-auto-complete-mode auto-complete-mode auto-complete)
 ;;;;;;  "auto-complete/auto-complete" "auto-complete/auto-complete.el"
-;;;;;;  (21758 35882 0 0))
+;;;;;;  (21760 8875 0 0))
 ;;; Generated autoloads from auto-complete/auto-complete.el
 
 (autoload 'auto-complete "auto-complete/auto-complete" "\
@@ -42,7 +42,7 @@ See `auto-complete-mode' for more information on Auto-Complete mode.
 ;;;***
 
 ;;;### (autoloads (ac-config-default) "auto-complete/auto-complete-config"
-;;;;;;  "auto-complete/auto-complete-config.el" (21758 35882 0 0))
+;;;;;;  "auto-complete/auto-complete-config.el" (21760 8875 0 0))
 ;;; Generated autoloads from auto-complete/auto-complete-config.el
 
 (autoload 'ac-config-default "auto-complete/auto-complete-config" "\
@@ -212,6 +212,24 @@ required.
 
 (autoload 'el-get-list-packages "el-get/el-get-list-packages" "\
 Display a list of packages.
+
+\(fn)" t nil)
+
+;;;***
+
+;;;### (autoloads (switch-window delete-other-window) "switch-window/switch-window"
+;;;;;;  "switch-window/switch-window.el" (21760 10092 0 0))
+;;; Generated autoloads from switch-window/switch-window.el
+
+(autoload 'delete-other-window "switch-window/switch-window" "\
+Display an overlay in each window showing a unique key, then
+ask user which window to delete
+
+\(fn)" t nil)
+
+(autoload 'switch-window "switch-window/switch-window" "\
+Display an overlay in each window showing a unique key, then
+ask user for the window where move to
 
 \(fn)" t nil)
 
@@ -496,7 +514,7 @@ See `yas-minor-mode' for more information on Yas minor mode.
 ;;;;;;  "popup/popup.el" "tabbar/aquamacs-compat.el" "tabbar/aquamacs-tabbar.el"
 ;;;;;;  "tabbar/aquamacs-tools.el" "tabbar/one-buffer-one-frame.el"
 ;;;;;;  "tabbar/tabbar-window.el" "yasnippet/yasnippet-debug.el"
-;;;;;;  "yasnippet/yasnippet-tests.el") (21759 41170 117949 60000))
+;;;;;;  "yasnippet/yasnippet-tests.el") (21760 10093 105498 94000))
 
 ;;;***
 

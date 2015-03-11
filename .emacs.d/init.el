@@ -21,6 +21,8 @@
 (require 'init-yasnippet)
 (require 'auto-complete-config)
 (require 'init-tabbar)
+(require 'init-ido)
+(require 'init-switch-window)
 
 (provide 'init)
 
