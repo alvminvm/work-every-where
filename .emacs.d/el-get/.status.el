@@ -45,6 +45,8 @@
 		       :description "A *visual* way to choose a window to switch to" :type github :pkgname "dimitri/switch-window"))
  (tabbar status "installed" recipe
 	 (:name tabbar :after nil :description "Display a tab bar in the header line." :type github :pkgname "dholm/tabbar" :lazy t))
+ (window-numbering status "installed" recipe
+		   (:name window-numbering :website "http://nschum.de/src/emacs/window-numbering-mode/" :description "Assigns numbers to Emacs windows to allow easy window navigation." :type github :pkgname "nschum/window-numbering.el"))
  (yasnippet status "installed" recipe
 	    (:name yasnippet :after nil :website "https://github.com/capitaomorte/yasnippet.git" :description "YASnippet is a template system for Emacs." :type github :pkgname "capitaomorte/yasnippet" :compile "yasnippet.el" :submodule nil :build
 		   (("git" "submodule" "update" "--init" "--" "snippets")))))

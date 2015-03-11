@@ -48,6 +48,9 @@
 ;;显示文件标题
 (setq frame-title-format "emacs@%b")    
 
+;; 启用window-numbering-mod
+(window-numbering-mode 1)
+
 ;; ----------------- 全局按键设定 -------------------
 ;;撤销
 (global-set-key (kbd "C-u") 'undo)

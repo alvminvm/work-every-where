@@ -484,6 +484,26 @@ Returns non-nil if the new state is enabled.
 
 ;;;***
 
+;;;### (autoloads (window-numbering-mode) "window-numbering/window-numbering"
+;;;;;;  "window-numbering/window-numbering.el" (21760 12552 0 0))
+;;; Generated autoloads from window-numbering/window-numbering.el
+
+(defvar window-numbering-mode nil "\
+Non-nil if Window-Numbering mode is enabled.
+See the command `window-numbering-mode' for a description of this minor mode.
+Setting this variable directly does not take effect;
+either customize it (see the info node `Easy Customization')
+or call the function `window-numbering-mode'.")
+
+(custom-autoload 'window-numbering-mode "window-numbering/window-numbering" nil)
+
+(autoload 'window-numbering-mode "window-numbering/window-numbering" "\
+A minor mode that assigns a number to each window.
+
+\(fn &optional ARG)" t nil)
+
+;;;***
+
 ;;;### (autoloads (yas-global-mode yas-minor-mode) "yasnippet/yasnippet"
 ;;;;;;  "yasnippet/yasnippet.el" (21752 22604 654104 191000))
 ;;; Generated autoloads from yasnippet/yasnippet.el
@@ -534,8 +554,8 @@ See `yas-minor-mode' for more information on Yas minor mode.
 ;;;;;;  "el-get/el-get-recipes.el" "el-get/el-get-status.el" "fuzzy/fuzzy.el"
 ;;;;;;  "popup/popup.el" "tabbar/aquamacs-compat.el" "tabbar/aquamacs-tabbar.el"
 ;;;;;;  "tabbar/aquamacs-tools.el" "tabbar/one-buffer-one-frame.el"
-;;;;;;  "tabbar/tabbar-window.el" "yasnippet/yasnippet-debug.el"
-;;;;;;  "yasnippet/yasnippet-tests.el") (21760 11007 599620 289000))
+;;;;;;  "tabbar/tabbar-window.el" "window-numbering/tests.el" "yasnippet/yasnippet-debug.el"
+;;;;;;  "yasnippet/yasnippet-tests.el") (21760 12552 603426 971000))
 
 ;;;***
 
