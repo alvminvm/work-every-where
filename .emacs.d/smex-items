@@ -1,17 +1,18 @@
 
 ;; ----- smex-history -----
 (
+ winner-mode
  cd
  5x5
  arp
  dbx
  dig
  erc
- ert
 )
 
 ;; ----- smex-data -----
 (
  (cd . 1)
  (date . 1)
+ (winner-mode . 1)
 )
