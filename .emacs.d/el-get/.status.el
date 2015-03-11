@@ -34,6 +34,8 @@
 	(:name fuzzy :website "https://github.com/auto-complete/fuzzy-el" :description "Fuzzy matching utilities for GNU Emacs" :type github :pkgname "auto-complete/fuzzy-el"))
  (popup status "installed" recipe
 	(:name popup :website "https://github.com/auto-complete/popup-el" :description "Visual Popup Interface Library for Emacs" :type github :submodule nil :pkgname "auto-complete/popup-el"))
+ (tabbar status "installed" recipe
+	 (:name tabbar :after nil :description "Display a tab bar in the header line." :type github :pkgname "dholm/tabbar" :lazy t))
  (yasnippet status "installed" recipe
 	    (:name yasnippet :after nil :website "https://github.com/capitaomorte/yasnippet.git" :description "YASnippet is a template system for Emacs." :type github :pkgname "capitaomorte/yasnippet" :compile "yasnippet.el" :submodule nil :build
 		   (("git" "submodule" "update" "--init" "--" "snippets")))))

@@ -20,6 +20,7 @@
 (require 'init-ace-jump)
 (require 'init-yasnippet)
 (require 'auto-complete-config)
+(require 'init-tabbar)
 
 (provide 'init)
 

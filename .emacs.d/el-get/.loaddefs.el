@@ -217,6 +217,234 @@ Display a list of packages.
 
 ;;;***
 
+;;;### (autoloads (revive-save-desktop revive-desktop resume save-current-configuration
+;;;;;;  wipe restore-window-configuration current-window-configuration-printable)
+;;;;;;  "tabbar/revive" "tabbar/revive.el" (21759 41169 0 0))
+;;; Generated autoloads from tabbar/revive.el
+
+(autoload 'current-window-configuration-printable "tabbar/revive" "\
+Return the printable current-window-configuration.
+This configuration will be stored by restore-window-configuration.
+Returned configurations are list of:
+'(Screen-Width Screen-Height Edge-List Buffer-List)
+
+Edge-List is a return value of revive:all-window-edges, list of all
+window-edges whose first member is always of north west window.
+
+Buffer-List is a list of buffer property list of all windows.  This
+property lists are stored in order corresponding to Edge-List.  Buffer
+property list is formed as
+'((buffer-file-name) (buffer-name) (point) (window-start) tabs).
+
+\(fn)" nil nil)
+
+(autoload 'restore-window-configuration "tabbar/revive" "\
+Restore the window configuration.
+Configuration CONFIG should be created by
+current-window-configuration-printable.
+
+\(fn CONFIG)" nil nil)
+
+(autoload 'wipe "tabbar/revive" "\
+Wipe Emacs.
+
+\(fn)" t nil)
+
+(autoload 'save-current-configuration "tabbar/revive" "\
+Save current window/buffer configuration into configuration file.
+
+\(fn &optional NUM)" t nil)
+
+(autoload 'resume "tabbar/revive" "\
+Resume window/buffer configuration.
+Configuration should be saved by save-current-configuration.
+
+\(fn &optional NUM)" t nil)
+
+(autoload 'revive-desktop "tabbar/revive" "\
+Restores the application state.
+Similar to `resume', though using `desktop' to restore buffers.
+
+\(fn &optional FILE AUTO)" t nil)
+
+(autoload 'revive-save-desktop "tabbar/revive" "\
+Save application state with `desktop' and `revive'.
+Similar to `save-current-configuration', 
+though uses `desktop' to restore buffers.
+
+\(fn &optional FILE AUTO)" t nil)
+
+;;;***
+
+;;;### (autoloads (tabbar-mwheel-mode tabbar-mode tabbar-local-mode
+;;;;;;  tabbar-mwheel-switch-group tabbar-mwheel-switch-tab tabbar-mwheel-forward-tab
+;;;;;;  tabbar-mwheel-backward-tab tabbar-mwheel-forward-group tabbar-mwheel-backward-group
+;;;;;;  tabbar-mwheel-forward tabbar-mwheel-backward tabbar-press-scroll-right
+;;;;;;  tabbar-press-scroll-left tabbar-press-home tabbar-forward-tab
+;;;;;;  tabbar-backward-tab tabbar-forward-group tabbar-backward-group
+;;;;;;  tabbar-forward tabbar-backward) "tabbar/tabbar" "tabbar/tabbar.el"
+;;;;;;  (21759 41169 0 0))
+;;; Generated autoloads from tabbar/tabbar.el
+
+(autoload 'tabbar-backward "tabbar/tabbar" "\
+Select the previous available tab.
+Depend on the setting of the option `tabbar-cycle-scope'.
+
+\(fn)" t nil)
+
+(autoload 'tabbar-forward "tabbar/tabbar" "\
+Select the next available tab.
+Depend on the setting of the option `tabbar-cycle-scope'.
+
+\(fn)" t nil)
+
+(autoload 'tabbar-backward-group "tabbar/tabbar" "\
+Go to selected tab in the previous available group.
+
+\(fn)" t nil)
+
+(autoload 'tabbar-forward-group "tabbar/tabbar" "\
+Go to selected tab in the next available group.
+
+\(fn)" t nil)
+
+(autoload 'tabbar-backward-tab "tabbar/tabbar" "\
+Select the previous visible tab.
+
+\(fn)" t nil)
+
+(autoload 'tabbar-forward-tab "tabbar/tabbar" "\
+Select the next visible tab.
+
+\(fn)" t nil)
+
+(autoload 'tabbar-press-home "tabbar/tabbar" "\
+Press the tab bar home button.
+That is, simulate a mouse click on that button.
+A numeric prefix ARG value of 2, or 3, respectively simulates a
+mouse-2, or mouse-3 click.  The default is a mouse-1 click.
+
+\(fn &optional ARG)" t nil)
+
+(autoload 'tabbar-press-scroll-left "tabbar/tabbar" "\
+Press the tab bar scroll-left button.
+That is, simulate a mouse click on that button.
+A numeric prefix ARG value of 2, or 3, respectively simulates a
+mouse-2, or mouse-3 click.  The default is a mouse-1 click.
+
+\(fn &optional ARG)" t nil)
+
+(autoload 'tabbar-press-scroll-right "tabbar/tabbar" "\
+Press the tab bar scroll-right button.
+That is, simulate a mouse click on that button.
+A numeric prefix ARG value of 2, or 3, respectively simulates a
+mouse-2, or mouse-3 click.  The default is a mouse-1 click.
+
+\(fn &optional ARG)" t nil)
+
+(autoload 'tabbar-mwheel-backward "tabbar/tabbar" "\
+Select the previous available tab.
+EVENT is the mouse event that triggered this command.
+Mouse-enabled equivalent of the command `tabbar-backward'.
+
+\(fn EVENT)" t nil)
+
+(autoload 'tabbar-mwheel-forward "tabbar/tabbar" "\
+Select the next available tab.
+EVENT is the mouse event that triggered this command.
+Mouse-enabled equivalent of the command `tabbar-forward'.
+
+\(fn EVENT)" t nil)
+
+(autoload 'tabbar-mwheel-backward-group "tabbar/tabbar" "\
+Go to selected tab in the previous available group.
+If there is only one group, select the previous visible tab.
+EVENT is the mouse event that triggered this command.
+Mouse-enabled equivalent of the command `tabbar-backward-group'.
+
+\(fn EVENT)" t nil)
+
+(autoload 'tabbar-mwheel-forward-group "tabbar/tabbar" "\
+Go to selected tab in the next available group.
+If there is only one group, select the next visible tab.
+EVENT is the mouse event that triggered this command.
+Mouse-enabled equivalent of the command `tabbar-forward-group'.
+
+\(fn EVENT)" t nil)
+
+(autoload 'tabbar-mwheel-backward-tab "tabbar/tabbar" "\
+Select the previous visible tab.
+EVENT is the mouse event that triggered this command.
+Mouse-enabled equivalent of the command `tabbar-backward-tab'.
+
+\(fn EVENT)" t nil)
+
+(autoload 'tabbar-mwheel-forward-tab "tabbar/tabbar" "\
+Select the next visible tab.
+EVENT is the mouse event that triggered this command.
+Mouse-enabled equivalent of the command `tabbar-forward-tab'.
+
+\(fn EVENT)" t nil)
+
+(autoload 'tabbar-mwheel-switch-tab "tabbar/tabbar" "\
+Select the next or previous tab according to EVENT.
+
+\(fn EVENT)" t nil)
+
+(autoload 'tabbar-mwheel-switch-group "tabbar/tabbar" "\
+Select the next or previous group of tabs according to EVENT.
+
+\(fn EVENT)" t nil)
+
+(autoload 'tabbar-local-mode "tabbar/tabbar" "\
+Toggle local display of the tab bar.
+With prefix argument ARG, turn on if positive, otherwise off.
+Returns non-nil if the new state is enabled.
+When turned on, if a local header line is shown, it is hidden to show
+the tab bar.  The tab bar is locally hidden otherwise.  When turned
+off, if a local header line is hidden or the tab bar is locally
+hidden, it is shown again.  Signal an error if Tabbar mode is off.
+
+\(fn &optional ARG)" t nil)
+
+(defvar tabbar-mode nil "\
+Non-nil if Tabbar mode is enabled.
+See the command `tabbar-mode' for a description of this minor mode.
+Setting this variable directly does not take effect;
+either customize it (see the info node `Easy Customization')
+or call the function `tabbar-mode'.")
+
+(custom-autoload 'tabbar-mode "tabbar/tabbar" nil)
+
+(autoload 'tabbar-mode "tabbar/tabbar" "\
+Toggle display of a tab bar in the header line.
+With prefix argument ARG, turn on if positive, otherwise off.
+Returns non-nil if the new state is enabled.
+
+\\{tabbar-mode-map}
+
+\(fn &optional ARG)" t nil)
+
+(defvar tabbar-mwheel-mode nil "\
+Non-nil if Tabbar-Mwheel mode is enabled.
+See the command `tabbar-mwheel-mode' for a description of this minor mode.
+Setting this variable directly does not take effect;
+either customize it (see the info node `Easy Customization')
+or call the function `tabbar-mwheel-mode'.")
+
+(custom-autoload 'tabbar-mwheel-mode "tabbar/tabbar" nil)
+
+(autoload 'tabbar-mwheel-mode "tabbar/tabbar" "\
+Toggle use of the mouse wheel to navigate through tabs or groups.
+With prefix argument ARG, turn on if positive, otherwise off.
+Returns non-nil if the new state is enabled.
+
+\\{tabbar-mwheel-mode-map}
+
+\(fn &optional ARG)" t nil)
+
+;;;***
+
 ;;;### (autoloads (yas-global-mode yas-minor-mode) "yasnippet/yasnippet"
 ;;;;;;  "yasnippet/yasnippet.el" (21752 22604 654104 191000))
 ;;; Generated autoloads from yasnippet/yasnippet.el
@@ -265,8 +493,10 @@ See `yas-minor-mode' for more information on Yas minor mode.
 ;;;;;;  "el-get/el-get-core.el" "el-get/el-get-custom.el" "el-get/el-get-dependencies.el"
 ;;;;;;  "el-get/el-get-install.el" "el-get/el-get-methods.el" "el-get/el-get-notify.el"
 ;;;;;;  "el-get/el-get-recipes.el" "el-get/el-get-status.el" "fuzzy/fuzzy.el"
-;;;;;;  "popup/popup.el" "yasnippet/yasnippet-debug.el" "yasnippet/yasnippet-tests.el")
-;;;;;;  (21758 35883 787073 885000))
+;;;;;;  "popup/popup.el" "tabbar/aquamacs-compat.el" "tabbar/aquamacs-tabbar.el"
+;;;;;;  "tabbar/aquamacs-tools.el" "tabbar/one-buffer-one-frame.el"
+;;;;;;  "tabbar/tabbar-window.el" "yasnippet/yasnippet-debug.el"
+;;;;;;  "yasnippet/yasnippet-tests.el") (21759 41170 117949 60000))
 
 ;;;***
 
