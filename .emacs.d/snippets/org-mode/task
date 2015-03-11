@@ -1,0 +1,13 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: task
+# key: task
+# --
+* ${1:星期一}--${2:星期五}
+** 50% 优化 [/]
+$3
+
+** 30% 新功能 [/]
+$4
+
+** 20% 自由 [/]
+$5
