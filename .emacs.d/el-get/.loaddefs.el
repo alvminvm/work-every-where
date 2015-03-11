@@ -217,6 +217,27 @@ Display a list of packages.
 
 ;;;***
 
+;;;### (autoloads (smex-initialize smex-major-mode-commands smex)
+;;;;;;  "smex/smex" "smex/smex.el" (21760 11007 0 0))
+;;; Generated autoloads from smex/smex.el
+
+(autoload 'smex "smex/smex" "\
+
+
+\(fn)" t nil)
+
+(autoload 'smex-major-mode-commands "smex/smex" "\
+Like `smex', but limited to commands that are relevant to the active major mode.
+
+\(fn)" t nil)
+
+(autoload 'smex-initialize "smex/smex" "\
+
+
+\(fn)" t nil)
+
+;;;***
+
 ;;;### (autoloads (switch-window delete-other-window) "switch-window/switch-window"
 ;;;;;;  "switch-window/switch-window.el" (21760 10092 0 0))
 ;;; Generated autoloads from switch-window/switch-window.el
@@ -514,7 +535,7 @@ See `yas-minor-mode' for more information on Yas minor mode.
 ;;;;;;  "popup/popup.el" "tabbar/aquamacs-compat.el" "tabbar/aquamacs-tabbar.el"
 ;;;;;;  "tabbar/aquamacs-tools.el" "tabbar/one-buffer-one-frame.el"
 ;;;;;;  "tabbar/tabbar-window.el" "yasnippet/yasnippet-debug.el"
-;;;;;;  "yasnippet/yasnippet-tests.el") (21760 10093 105498 94000))
+;;;;;;  "yasnippet/yasnippet-tests.el") (21760 11007 599620 289000))
 
 ;;;***
 

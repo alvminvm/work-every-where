@@ -21,6 +21,7 @@
 (el-get-bundle auto-complete)
 (el-get-bundle tabbar)
 (el-get-bundle switch-window)
+(el-get-bundle smex)
 
 ;; (el-get 'sync)
 (provide 'init-el-get)
