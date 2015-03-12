@@ -21,4 +21,16 @@
 (insert (format-time-string "%Y-%m-%d %H:%M:%S"))) 
 
 
+;; c-w 和 m-w在未选中的时候直接复制当前行和剪切当前行
+(defadvice kill-ring-save (before slickcopy activate compile)  
+    (interactive  
+     (if mark-active (list (region-beginning) (region-end))  
+       (list (line-beginning-position)  
+             (line-beginning-position 2)))))  
+  (defadvice kill-region (before slickcut activate compile)  
+    (interactive  
+     (if mark-active (list (region-beginning) (region-end))  
+       (list (line-beginning-position)  
+            (line-beginning-position 2))))) 
+
 (provide 'init-useful-function)
