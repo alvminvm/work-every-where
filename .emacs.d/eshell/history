@@ -11,3 +11,7 @@ ls
 git log
 exit
 exit
+ls
+ll
+git staus
+git stauts
