@@ -51,6 +51,12 @@
 ;; 启用window-numbering-mod
 (window-numbering-mode 1)
 
+;;不生成#F#文件
+(setq auto-save-default nil)
+
+;;不生成临时文件
+(setq-default make-backup-files nil)
+
 ;; ----------------- 全局按键设定 -------------------
 ;;撤销
 (global-set-key (kbd "C-u") 'undo)
