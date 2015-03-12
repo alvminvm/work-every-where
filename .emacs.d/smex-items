@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
- ac-complete
- ac-fuzzy-complete
- recover-file
  shell
- winner-mode
- el-get-install
- cd
+ eshell
+ replace-regexp
+ query-replace
+ auto-complete-mode
+ global-auto-complete-mode
+ ac-complete
 )
 
 ;; ----- smex-data -----
@@ -16,8 +16,11 @@
  (date . 1)
  (el-get-install . 1)
  (winner-mode . 1)
- (shell . 1)
- (recover-file . 1)
- (ac-fuzzy-complete . 1)
+ (shell . 5)
  (ac-complete . 1)
+ (global-auto-complete-mode . 2)
+ (auto-complete-mode . 1)
+ (query-replace . 1)
+ (replace-regexp . 1)
+ (eshell . 1)
 )
