@@ -61,6 +61,9 @@
 ;;撤销
 (global-set-key (kbd "C-u") 'undo)
 
+;; C-ret to set mark
+(define-key global-map [S-return] 'set-mark-command)
+
 ;; 采用smex代替原来的M-x命令   
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
