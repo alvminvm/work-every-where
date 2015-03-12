@@ -64,6 +64,9 @@
 ;; C-ret to set mark
 (define-key global-map [S-return] 'set-mark-command)
 
+;; use ESC for C-g
+(define-key global-map (kbd "<escape>") 'keyboard-quit)
+
 ;; 采用smex代替原来的M-x命令   
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
