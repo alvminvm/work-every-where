@@ -19,7 +19,7 @@
 (require 'init-useful-function)
 (require 'init-ace-jump)
 (require 'init-yasnippet)
-(require 'auto-complete-config)
+(require 'init-auto-complete)
 (require 'init-tabbar)
 (require 'init-ido)
 (require 'init-switch-window)
