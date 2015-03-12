@@ -2,17 +2,18 @@
 ;; ----- smex-history -----
 (
  winner-mode
+ el-get-install
  cd
  5x5
  arp
  dbx
  dig
- erc
 )
 
 ;; ----- smex-data -----
 (
  (cd . 1)
  (date . 1)
+ (el-get-install . 1)
  (winner-mode . 1)
 )
