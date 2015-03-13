@@ -1,0 +1,6 @@
+# alias
+alias q='exit'
+alias c='clear'
+alias glg='git log --graph --decorate'
+alias glga='git log --graph --decorate --all'
+
