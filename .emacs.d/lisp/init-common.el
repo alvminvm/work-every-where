@@ -67,6 +67,14 @@
 ;; use ESC for C-g
 (define-key global-map (kbd "<escape>") 'keyboard-quit)
 
+;; C-h to move-beginning-of-line
+(global-set-key (kbd "C-h") 'move-beginning-of-line)
+;; C-l to move-end-of-line
+(global-set-key (kbd "C-l") 'move-end-of-line)
+
+;; C-; to C-h recenter-top-bottom
+(global-set-key (kbd "C-;") 'recenter-top-bottom)
+
 ;; 采用smex代替原来的M-x命令   
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)

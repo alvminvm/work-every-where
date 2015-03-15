@@ -4,3 +4,9 @@ alias c='clear'
 alias glg='git log --graph --decorate'
 alias glga='git log --graph --decorate --all'
 
+
+# PATH
+export ANDROID_HOME=/home/jeremyhe/Android/Sdk
+export JAVA_HOME=/
+
+export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools
