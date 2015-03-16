@@ -1,4 +1,4 @@
 (require 'ido)
-(ido-mode t)
+;; (ido-mode t)
 
 (provide 'init-ido)
