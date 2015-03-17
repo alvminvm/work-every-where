@@ -76,7 +76,10 @@
 (global-set-key (kbd "C-;") 'recenter-top-bottom)
 
 ;; 采用smex代替原来的M-x命令   
-(global-set-key (kbd "M-x") 'smex)
+;; (global-set-key (kbd "M-x") 'smex) 使用了helm后，这个可以暂时不用
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+
+;; M-y helm-kill-ring
+(global-set-key (kbd "M-y") 'helm-show-kill-ring)
 
 (provide 'init-common)
