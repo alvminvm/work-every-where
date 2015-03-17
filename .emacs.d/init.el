@@ -24,6 +24,7 @@
 (require 'init-ido)
 (require 'init-switch-window)
 (require 'init-helm)
+(require 'init-projectile)
 
 (provide 'init)
 
