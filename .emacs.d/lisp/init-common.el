@@ -62,7 +62,7 @@
 (global-set-key (kbd "C-u") 'undo)
 
 ;; C-ret to set mark
-(define-key global-map [S-return] 'set-mark-command)
+(define-key global-map (kbd "C-c SPC") 'set-mark-command)
 
 ;; use ESC for C-g
 (define-key global-map (kbd "<escape>") 'keyboard-quit)
