@@ -22,6 +22,7 @@
 (el-get-bundle tabbar)
 (el-get-bundle switch-window)
 (el-get-bundle smex)
+(el-get-bundle helm)
 
 (el-get 'sync)
 (provide 'init-el-get)

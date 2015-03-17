@@ -23,6 +23,7 @@
 (require 'init-tabbar)
 (require 'init-ido)
 (require 'init-switch-window)
+(require 'init-helm)
 
 (provide 'init)
 
