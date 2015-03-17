@@ -1,31 +1,32 @@
 
 ;; ----- smex-history -----
 (
+ helm-mode
+ helm-M-x
+ el-get-install
+ set-mark-command
  shell
- query-replace
- ac-complete-yasnippet
- shell-script-mode
  keyboard-quit
  help-quit
- winner-mode
 )
 
 ;; ----- smex-data -----
 (
  (cd . 1)
  (date . 1)
- (el-get-install . 1)
+ (el-get-install . 3)
  (winner-mode . 2)
- (shell . 11)
+ (shell . 10)
  (ac-complete . 1)
  (global-auto-complete-mode . 2)
  (auto-complete-mode . 1)
- (query-replace . 2)
+ (query-replace . 1)
  (replace-regexp . 1)
  (eshell . 1)
  (winner-undo . 1)
  (help-quit . 1)
  (keyboard-quit . 1)
- (shell-script-mode . 1)
- (ac-complete-yasnippet . 1)
+ (set-mark-command . 1)
+ (helm-M-x . 1)
+ (helm-mode . 1)
 )
