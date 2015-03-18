@@ -82,4 +82,8 @@
 ;; M-y helm-kill-ring
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
 
+;; C-s to save buffer M-s to isearch
+(global-set-key (kbd "C-s") 'save-buffer)
+(global-set-key (kbd "M-s") 'isearch-forward)
+
 (provide 'init-common)
