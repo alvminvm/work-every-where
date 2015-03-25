@@ -3,7 +3,7 @@
 " Version: 1.0
 " Email: jeremyhe.cn@gmail.com
 " Blog: http://J-Cn.me
-" Last_modify: 2015-01-23
+" Last_modify: 2015-03-23
 " Sections:
 "       -> Initial Plugin 加载插件
 "       -> General Settings 基础设置
@@ -34,7 +34,6 @@ endif
 "==========================================
 " General Settings 基础设置
 "==========================================
-
 
 set shortmess=atI       	" 启动的时候不显示那个援助索马里儿童的提示
 
@@ -95,6 +94,7 @@ set co=170					" 设置启动时默认列数
 
 if has('gui')
 	set guioptions-=T		" GUI隐藏工具栏
+	set guifont=Ubuntu\ Mono\ 12 " 设置字体
 endif
 
 " TODO: 启动时默认窗口大小
