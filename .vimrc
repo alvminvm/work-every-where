@@ -26,8 +26,8 @@ let g:mapleader=','
 "==========================================
 
 " install Vundle bundles 安装Vundle插件管理
-if filereadable(expand("~/bundles.vimrc"))
-  source ~/bundles.vimrc
+if filereadable(expand("~/.vim/bundles.vimrc"))
+  source ~/.vim/bundles.vimrc
 endif
 
 
@@ -240,14 +240,19 @@ imap <C-v> <Esc>"+p<Esc>a
 "插入模式下Ctrl+B插入<br>
 imap <C-b> <br>
 
+"插入模式下Ctrl+h,j,k,l为方向
+imap <C-h> <Esc>ha
+imap <C-j> <Esc>ja
+imap <C-k> <Esc>ka
+imap <C-l> <Esc>la
+
+"Ctrl+g为取消,类似Emacs
+imap <C-g> <Esc>
+vmap <C-g> <Esc>
+
 "上下移动指定行
 map <M-j> ddp
 map <M-k> ddkP
-
-"C，C++ 按F5编译运行
-
-
-
 
 " Smart way to move between windows 分屏窗口移动
 map <C-j> <C-W>j
