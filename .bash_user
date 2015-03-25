@@ -3,7 +3,8 @@ alias q='exit'
 alias c='clear'
 alias glg='git log --graph --decorate'
 alias glga='git log --graph --decorate --all'
-
+alias blog='cd VirtualEnvs/Pelican/ && . bin/activate && cd J-Cn.me'
+alias blog-on='make html && make serve'
 
 # PATH
 export ANDROID_HOME=/home/jeremyhe/Android/Sdk

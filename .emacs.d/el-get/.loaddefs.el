@@ -221,8 +221,8 @@ Display a list of packages.
 ;;;### (autoloads (pkg-info-version-info pkg-info-package-version
 ;;;;;;  pkg-info-defining-library-version pkg-info-defining-library-original-version
 ;;;;;;  pkg-info-library-version pkg-info-library-original-version)
-;;;;;;  "pkg-info/pkg-info" "pkg-info/pkg-info.el" (21767 54226 0
-;;;;;;  0))
+;;;;;;  "pkg-info/pkg-info" "pkg-info/pkg-info.el" (21769 33673 476868
+;;;;;;  421000))
 ;;; Generated autoloads from pkg-info/pkg-info.el
 
 (autoload 'pkg-info-library-original-version "pkg-info/pkg-info" "\
@@ -336,7 +336,7 @@ version.
 ;;;;;;  helm-projectile-grep helm-projectile-off helm-projectile-on
 ;;;;;;  helm-projectile-find-other-file helm-projectile-find-file-dwim
 ;;;;;;  helm-projectile-fuzzy-match) "projectile/helm-projectile"
-;;;;;;  "projectile/helm-projectile.el" (21767 54584 0 0))
+;;;;;;  "projectile/helm-projectile.el" (21769 33981 636869 585000))
 ;;; Generated autoloads from projectile/helm-projectile.el
 
 (defvar helm-projectile-fuzzy-match t "\
@@ -395,7 +395,7 @@ If invoked outside of a project, displays a list of known projects to jump.
 ;;;***
 
 ;;;### (autoloads (projectile-persp-switch-project) "projectile/persp-projectile"
-;;;;;;  "projectile/persp-projectile.el" (21767 54584 0 0))
+;;;;;;  "projectile/persp-projectile.el" (21769 33981 636869 585000))
 ;;; Generated autoloads from projectile/persp-projectile.el
 
 (autoload 'projectile-persp-switch-project "projectile/persp-projectile" "\
@@ -426,8 +426,8 @@ perspective.
 ;;;;;;  projectile-find-file-dwim projectile-multi-occur projectile-project-buffers-other-buffer
 ;;;;;;  projectile-display-buffer projectile-switch-to-buffer-other-window
 ;;;;;;  projectile-switch-to-buffer projectile-cache-current-file)
-;;;;;;  "projectile/projectile" "projectile/projectile.el" (21767
-;;;;;;  54584 0 0))
+;;;;;;  "projectile/projectile" "projectile/projectile.el" (21769
+;;;;;;  33981 636869 585000))
 ;;; Generated autoloads from projectile/projectile.el
 
 (autoload 'projectile-cache-current-file "projectile/projectile" "\
@@ -1011,7 +1011,7 @@ See `yas-minor-mode' for more information on Yas minor mode.
 ;;;;;;  "popup/popup.el" "s/s.el" "tabbar/aquamacs-compat.el" "tabbar/aquamacs-tabbar.el"
 ;;;;;;  "tabbar/aquamacs-tools.el" "tabbar/one-buffer-one-frame.el"
 ;;;;;;  "tabbar/tabbar-window.el" "window-numbering/tests.el" "yasnippet/yasnippet-debug.el"
-;;;;;;  "yasnippet/yasnippet-tests.el") (21767 54586 114473 15000))
+;;;;;;  "yasnippet/yasnippet-tests.el") (21769 38364 219805 547000))
 
 ;;;***
 
