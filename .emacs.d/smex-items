@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
- helm-mode
- helm-M-x
  el-get-install
  set-mark-command
  shell
  keyboard-quit
  help-quit
+ winner-mode
+ global-auto-complete-mode
 )
 
 ;; ----- smex-data -----
