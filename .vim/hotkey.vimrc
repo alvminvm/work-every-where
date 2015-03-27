@@ -92,17 +92,11 @@ noremap L $
 nnoremap ; :
 
 " tab navigate 标签页导航相关操作
-map <leader>th :tabfirst<cr>
-map <leader>tl :tablast<cr>
-
-map <leader>tj :tabnext<cr>
-map <leader>tk :tabprev<cr>
 map <leader>tn :tabnext<cr>
 map <leader>tp :tabprev<cr>
 
 map <leader>te :tabedit<cr>
 map <leader>tc :tabclose<cr>
-map <leader>tm :tabm<cr>
 
 " normal模式下切换到确切的tab
 noremap <leader>1 1gt

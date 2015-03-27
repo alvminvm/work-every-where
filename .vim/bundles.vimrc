@@ -91,5 +91,6 @@ Plugin 'dhruvasagar/vim-table-mode'
 let g:table_mode_corner = '|'
 let g:table_mode_delimiter = '  '
 
+
 call vundle#end()            " required
 filetype plugin indent on    " required
