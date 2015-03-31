@@ -60,6 +60,12 @@ let g:ctrlp_custom_ignore = {
 "  \ 'link': 'some_bad_symbolic_links',
 
 
+" ############# FuzzyFinder #########
+Plugin 'L9'
+Plugin 'vim-scripts/FuzzyFinder'
+map <Leader>ff :FufFile<CR>
+map <Leader>fd :FufDir<CR>
+
 
 " ########## airline 状态栏增强 ########
 Plugin 'bling/vim-airline'
@@ -84,12 +90,21 @@ map  / <Plug>(easymotion-sn)
 map  n <Plug>(easymotion-next)
 map  N <Plug>(easymotion-prev)
 let g:EasyMotion_smartcase = 1
+hi link EasyMotionTarget Search
+hi link EasyMotionTarget2First Search
+hi link EasyMotionTarget2Second Search
+hi link EasyMotionShade Comment
 
 
 " ######### markdown table support ###########
 Plugin 'dhruvasagar/vim-table-mode'
 let g:table_mode_corner = '|'
 let g:table_mode_delimiter = '  '
+
+
+" ############ 主题 ########### 
+Plugin 'altercation/vim-colors-solarized'
+let g:solarized_termcolors=256
 
 
 call vundle#end()            " required
