@@ -369,5 +369,12 @@ nnoremap <buffer> <F10> :exec '!python' shellescape(@%, 1)<cr>
 "==========================================
 " Theme Settings  主题设置
 "==========================================
-
+syntax enable
+set background=dark
+let g:solarized_termcolors=256
+colorscheme solarized
+hi link EasyMotionTarget Search
+hi link EasyMotionTarget2First Search
+hi link EasyMotionTarget2Second Search
+hi link EasyMotionShade Comment
 
