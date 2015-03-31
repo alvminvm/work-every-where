@@ -1,1 +1,1 @@
-("~/git/WorkManager/" "~/" "~/git/docs/" "~/J-Cn.me/themes/landscape-plus/" "~/git/GetDone-e/")
+("~/" "~/VirtualEnvs/Pelican/J-Cn.me/" "~/VirtualEnv/Pelican/J-Cn.me/" "~/git/WorkManager/" "~/git/docs/" "~/J-Cn.me/themes/landscape-plus/" "~/git/GetDone-e/")
