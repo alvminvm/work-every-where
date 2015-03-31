@@ -8,6 +8,6 @@ alias blog-on='make html && make serve'
 
 # PATH
 export ANDROID_HOME=/home/jeremyhe/Android/Sdk
-export JAVA_HOME=/
+export JAVA_HOME=/home/jeremyhe/Software/jdk
 
-export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$JAVA_HOME/bin

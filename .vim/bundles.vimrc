@@ -35,7 +35,8 @@ let g:NERDTreeMapOpenSplit = 's'
 let g:NERDTreeMapOpenVSplit = 'v'
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | end
 
-
+" ############# Git目录显示支持 #############"
+Plugin 'Xuyuanp/git-NERDTree'
 
 " ############ Outline 标签导航 ###########
 Plugin 'majutsushi/tagbar'
