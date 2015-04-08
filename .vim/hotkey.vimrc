@@ -119,4 +119,12 @@ autocmd TabLeave * let g:last_active_tab=tabpagenr()
 nnoremap <C-t> :tabnew<CR>	
 inoremap <C-t> <Esc>:tabnew<CR>
 
+" 添加时间
+nnoremap <C-d> "=strftime("%F %T")<CR>gP
+inoremap <C-d> <C-R>=strftime("%F %T")<CR>
+ab d## <c-r>=strftime('%Y-%m-%d %H:%M')<cr> 
+
+" 添加文件名和文件路经
+ab fn## <c-r>=expand('%:p:t')<cr> 
+ab fp## <c-r>=expand('%:p')<cr> 
 
