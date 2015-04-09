@@ -51,7 +51,7 @@ Plugin 'ervandew/supertab'
 
 " ########## ctrlp 文件搜索 ######
 Plugin 'kien/ctrlp.vim'
-let g:ctrlp_map = '<c-p>'
+let g:ctrlp_map = '<leader>cp'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_custom_ignore = {
@@ -106,6 +106,11 @@ let g:table_mode_delimiter = '  '
 " ############ 主题 ########### 
 Plugin 'altercation/vim-colors-solarized'
 let g:solarized_termcolors=256
+
+" ########### 多光标 ########### 
+Plugin 'terryma/vim-multiple-cursors'
+let g:multi_cursor_exit_from_visual_mode = 0
+let g:multi_cursor_exit_from_insert_mode = 0
 
 
 call vundle#end()            " required
