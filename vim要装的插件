@@ -1,0 +1,18 @@
+新的vim主题
+
+Gundo
+try
+    set undodir=~/.vim/temp_dirs/undodir
+    set undofile
+catch
+endtry
+
+vimshell
+
+tpope/vim-fugitive
+
+tpope/vim-markdown
+
+markdown-prreview
+
+ycm && utisnippet
