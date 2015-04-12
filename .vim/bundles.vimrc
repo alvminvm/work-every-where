@@ -118,5 +118,10 @@ let g:multi_cursor_exit_from_insert_mode = 0
 Plugin 'sjl/gundo.vim'
 
 
+" ########### Vim-task ###########
+Plugin 'samsonw/vim-task'
+noremap <leader>cc :call Toggle_task_status()<CR>
+
+
 call vundle#end()            " required
 filetype plugin indent on    " required
