@@ -1,0 +1,17 @@
+
+samsonw/vim-task
+
+vimshell
+
+tpope/vim-fugitive
+
+tpope/vim-markdown
+plasticboy/vim-markdown
+
+markdown-prreview
+
+ycm && utisnippet
+
+scrooloose/nerdcommenter
+
+修复自动补全
