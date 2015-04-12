@@ -3,7 +3,7 @@
 " Version: 1.0
 " Email: jeremyhe.cn@gmail.com
 " Blog: http://J-Cn.me
-" Last_modify: 2015-03-26
+" Last_modify: 2015-04-12 21:35  
 " Description: 独立出快捷键的设置
 "==========================================
 
@@ -122,9 +122,9 @@ inoremap <C-t> <Esc>:tabnew<CR>
 " 添加时间
 nnoremap <C-d> "=strftime("%F %T")<CR>gP
 inoremap <C-d> <C-R>=strftime("%F %T")<CR>
-ab d## <c-r>=strftime('%Y-%m-%d %H:%M')<cr> 
+ab d; <c-r>=strftime('%Y-%m-%d %H:%M')<cr> 
 
 " 添加文件名和文件路经
-ab fn## <c-r>=expand('%:p:t')<cr> 
-ab fp## <c-r>=expand('%:p')<cr> 
+ab fn; <c-r>=expand('%:p:t')<cr> 
+ab fp; <c-r>=expand('%:p')<cr> 
 
