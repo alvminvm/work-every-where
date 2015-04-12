@@ -107,6 +107,5 @@ let g:table_mode_delimiter = '  '
 Plugin 'altercation/vim-colors-solarized'
 let g:solarized_termcolors=256
 
-
 call vundle#end()            " required
 filetype plugin indent on    " required
