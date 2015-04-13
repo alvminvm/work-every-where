@@ -2,8 +2,8 @@
 " Author:  JeremyHe
 " Version: 1.0
 " Email: jeremyhe.cn@gmail.com
-" Blog: http://J-Cn.me
-" Last_modify: 2015-03-23
+" Blog: http://www.J-Cn.me
+" Last_modify: 2015-04-13 21:47  
 " Sections:
 "       -> Initial Plugin 加载插件
 "       -> General Settings 基础设置
@@ -56,7 +56,7 @@ set nobackup				" no backup 取消备份
 set noswapfile				" 关闭交换文件
 
 " Configure backspace so it acts as it should act
-set backspace=eol,start,indent
+"set backspace=eol,start,indent
 set whichwrap+=<,>,h,l		" 允许backspace和光标键跨越行边界
 
 set viminfo+=!				" 保存全局变量
@@ -64,7 +64,7 @@ set viminfo+=!				" 保存全局变量
 " 自动补全
 :inoremap ( ()<ESC>i
 :inoremap ) <c-r>=ClosePair(')')<CR>
-:inoremap { {<CR>}<ESC>O
+:inoremap { {}<ESC>i
 :inoremap } <c-r>=ClosePair('}')<CR>
 :inoremap [ []<ESC>i
 :inoremap ] <c-r>=ClosePair(']')<CR>
@@ -88,7 +88,7 @@ set t_Co=256				" force Vim into 256 color mode 强制使用256颜色，保证�
 
 winpos 400 100				" 设置启动时的位置
 
-set lines=50				" 设置启动时默认行数
+set lines=48				" 设置启动时默认行数
 
 set co=170					" 设置启动时默认列数
 
@@ -107,7 +107,7 @@ set showcmd					" 在状态栏显示正在输入的命令
 
 set showmode				" 左下角显示当前vim模式
 
-set scrolloff=7			" 在上下移动光标时，光标的上方或下方至少会保留显示的行数
+set scrolloff=10			" 在上下移动光标时，光标的上方或下方至少会保留显示的行数
 
 set showmatch				" 高亮显示匹配的括号
 set matchtime=2			" 匹配括号高亮的时间（单位是十分之一秒）

@@ -2,8 +2,8 @@
 " Author:  JeremyHe
 " Version: 1.0
 " Email: jeremyhe.cn@gmail.com
-" Blog: http://J-Cn.me
-" Last_modify: 2015-01-23
+" Blog: http://www.J-Cn.me
+" Last_modify: 2015-04-13 21:46  
 " Description: Vundle插件管理配置文件
 " Sections:
 "       -> Enable Vundle 启用Vundle插件
@@ -59,6 +59,7 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\v\.(exe|so|dll)$',
   \ }
 "  \ 'link': 'some_bad_symbolic_links',
+nmap <leader>cm :CtrlPMRUFiles<CR>
 
 
 " ############# FuzzyFinder #########
@@ -121,6 +122,19 @@ Plugin 'sjl/gundo.vim'
 " ########### Vim-task ###########
 Plugin 'samsonw/vim-task'
 noremap <leader>cc :call Toggle_task_status()<CR>
+
+
+" ########### markdown ########### 
+Plugin 'plasticboy/vim-markdown'
+let g:vim_markdown_no_default_key_mappings=1
+au BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn} nmap <F9> :Toc<CR>
+au BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn} imap <F9> <ESC>:Toc<CR>
+
+
+" ########### 快速注释 ########### 
+Plugin 'scrooloose/nerdcommenter'
+let NERDCreateDefaultMappings = 0
+map <Leader>c<space> <plug>NERDCommenterToggle
 
 
 call vundle#end()            " required
