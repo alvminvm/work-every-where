@@ -45,7 +45,7 @@ let g:tagbar_autofocus = 1
 
 
 " ########### Super Tab 采用Tab键自动补全 #####
-Plugin 'ervandew/supertab'	
+"Plugin 'ervandew/supertab'	
 
 
 
@@ -135,6 +135,11 @@ au BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn} imap <F9> <ESC>:Toc<CR
 Plugin 'scrooloose/nerdcommenter'
 let NERDCreateDefaultMappings = 0
 map <Leader>c<space> <plug>NERDCommenterToggle
+
+
+" ########### YCM 自动补全插件 ###########
+Plugin 'Valloric/YouCompleteMe'
+
 
 
 call vundle#end()            " required
