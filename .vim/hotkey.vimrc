@@ -123,6 +123,8 @@ inoremap <C-t> <Esc>:tabnew<CR>
 nnoremap <C-d> "=strftime("%F %T")<CR>gP
 inoremap <C-d> <C-R>=strftime("%F %T")<CR>
 ab d; <c-r>=strftime('%Y-%m-%d %H:%M')<cr> 
+ab d-; <c-r>=strftime('%Y-%m-%d')<cr> 
+ab d/; <c-r>=strftime('%Y/%m/%d')<cr> 
 
 " 添加文件名和文件路经
 ab fn; <c-r>=expand('%:p:t')<cr> 

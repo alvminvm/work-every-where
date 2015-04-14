@@ -3,6 +3,3 @@ tpope/vim-fugitive
 
 ycm && utisnippet
 
-scrooloose/nerdcommenter
-
-修复自动补全
