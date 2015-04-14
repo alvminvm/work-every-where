@@ -13,6 +13,7 @@
 "       -> HotKey Settings  自定义快捷键
 "       -> FileType Settings  针对文件类型的设置
 "       -> Theme Settings  主题设置
+"       -> Function 一些有用的函数
 "
 "       -> 插件配置和具体设置在vimrc.bundles中
 "==========================================
@@ -264,4 +265,18 @@ hi link EasyMotionTarget Search
 hi link EasyMotionTarget2First Search
 hi link EasyMotionTarget2Second Search
 hi link EasyMotionShade Comment
+
+
+"==========================================
+" Function 一些有用的函数
+"==========================================
+if filereadable(expand("~/.vim/func.vimrc"))
+	source ~/.vim/func.vimrc
+endif
+
+
+
+
+
+
 
