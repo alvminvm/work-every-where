@@ -3,7 +3,7 @@
 " Version: 1.0
 " Email: jeremyhe.cn@gmail.com
 " Blog: http://www.J-Cn.me
-" Last_modify: 2015-04-13 21:46  
+" Last_modify: 2015-04-15 12:09 
 " Description: Vundle插件管理配置文件
 " Sections:
 "       -> Enable Vundle 启用Vundle插件
@@ -45,7 +45,7 @@ let g:tagbar_autofocus = 1
 
 
 " ########### Super Tab 采用Tab键自动补全 #####
-"Plugin 'ervandew/supertab'	
+Plugin 'ervandew/supertab'	
 
 
 
@@ -159,6 +159,21 @@ let g:ycm_filetype_blacklist = {
       \}
 " 输入第一个字符就开始补全  
 "let g:ycm_min_num_of_chars_for_completion=1
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
+
+
+" ############ SirVer/ultisnips	############## "
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'	
+" Trigger configuration. Using SuperTab
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+" If you want :UltiSnipsEdit to split your window.
+"let g:UltiSnipsEditSplit="vertical"
+
 
 
 call vundle#end()            " required
