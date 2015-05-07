@@ -5,9 +5,11 @@ alias glg='git log --graph --decorate'
 alias glga='git log --graph --decorate --all'
 alias blog='cd VirtualEnvs/Pelican/ && . bin/activate && cd J-Cn.me'
 alias blog-on='make html && make serve'
+alias cdg='cd Git/MyMoneySms'
 
 # PATH
 export ANDROID_HOME=/home/jeremyhe/Android/Sdk
 export JAVA_HOME=/home/jeremyhe/Software/jdk
+export CMAKE_HOME=/home/jeremyhe/Software/cmake
 
-export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$JAVA_HOME/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$JAVA_HOME/bin:$JAVA_HOME/jre/bin:$CMAKE_HOME/bin
