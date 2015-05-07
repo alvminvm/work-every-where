@@ -15,7 +15,7 @@
 "==========================================
 set nocompatible                " be iMproved
 filetype off                    " required!
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
 
 "     :PluginInstall     install 安装配置的插件
