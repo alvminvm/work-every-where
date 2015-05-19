@@ -6,6 +6,9 @@ alias glga='git log --graph --decorate --all'
 alias blog='cd VirtualEnvs/Pelican/ && . bin/activate && cd J-Cn.me'
 alias blog-on='make html && make serve'
 alias cdg='cd Git/MyMoneySms'
+alias coveragem='java -cp emma.jar emma merge '
+alias gitcafepagepush='git push gitcafe master:gitcafe-pages'
+
 
 # PATH
 export ANDROID_HOME=/home/jeremyhe/Android/Sdk
