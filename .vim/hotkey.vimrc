@@ -84,6 +84,12 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
+" quick resize windows  
+nmap < <C-W><
+nmap > <C-W>>
+nmap - <C-W>-
+nmap + <C-W>+
+
 " Go to home and end using capitalized directions 使用H和L跳到行首和行尾，原本H和L的功能废弃
 noremap H ^
 noremap L $
