@@ -1,9 +1,9 @@
 "==========================================
 " Author:  JeremyHe
-" Version: 1.0
+" Version: 2.0
 " Email: jeremyhe.cn@gmail.com
-" Blog: http://J-Cn.me
-" Last_modify: 2015-04-12 21:35  
+" Blog: http://zlv.me
+" Last_modify: 2015-06-10 15:36 
 " Description: 独立出快捷键的设置
 "==========================================
 
@@ -93,6 +93,8 @@ nmap + <C-W>+
 " Go to home and end using capitalized directions 使用H和L跳到行首和行尾，原本H和L的功能废弃
 noremap H ^
 noremap L $
+imap HH <Esc>^i
+imap LL <Esc>$a
 
 " 分号快速进入命令模式
 nnoremap ; :
