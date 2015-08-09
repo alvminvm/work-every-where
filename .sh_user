@@ -1,5 +1,5 @@
 # alias
-alias q='exit'
+alias q="exit"
 alias c='clear'
 alias glg='git log --graph --decorate'
 alias glga='git log --graph --decorate --all'
@@ -12,8 +12,8 @@ alias gitstatus='git status'
 
 
 # PATH
-export ANDROID_HOME=/home/jeremyhe/Android/Sdk
+export ANDROID_HOME=/home/jeremyhe/Software/android-sdk-linux
 export JAVA_HOME=/home/jeremyhe/Software/jdk
-export CMAKE_HOME=/home/jeremyhe/Software/cmake
+export ANDROID_STUDIO_HOME=/home/jeremyhe/Software/android-studio
 
-export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$JAVA_HOME/bin:$JAVA_HOME/jre/bin:$CMAKE_HOME/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$JAVA_HOME/bin:$JAVA_HOME/jre/bin:$CMAKE_HOME/bin:$ANDROID_STUDIO_HOME/bin

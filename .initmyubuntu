@@ -1,0 +1,52 @@
+#!/bin/sh
+
+read -p "input ur ubuntu password: " password;
+main();
+
+main()
+{
+	cmd = -1;
+	while(cmd != 0)
+	{
+		echo "1. init all.\r\n";
+		echo ". init common\r\n";
+		echo ". install chrome.\r\n";
+		echo ". TODO: install zsh\r\n";
+		echo ". TODO: set PATH";
+		
+		read -p "ur choice: " cmd;
+
+	}
+}
+
+install_chrome()
+{
+	sudo -S $password apt-get install chromium-browser pepperflashplugin-nonfree
+}
+
+install_zsh()
+{
+	# install 
+	sudo -S $password apt-get install zsh autojump;
+	wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh
+	
+	# TODO: modify .zshrc
+	echo "add 'autojump' to plugins in .zshrc\r\n";
+	echo "add 'source ~/.sh_user'\r\n"
+
+}
+
+instal_synapse()
+{
+	sudo apt-get install indicator-synapse xdotool;
+
+	echo "1. 执行xdotool getmouselocation获取位置信息\r\n"
+	echo "2. xdotool mousemove 1177 8确认位置是否正确\r\n"
+	echo "3. 添加快捷键到xdotool mousemove 1177 8 click 1 mousemove restore\r\n"
+	
+}
+
+init_common()
+{
+	sudo -S $password apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1;
+}
