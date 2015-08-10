@@ -38,6 +38,7 @@ install_zsh()
 
 instal_synapse()
 {
+    sudo add-apt-repository ppa:noobslab/apps && sudo apt-get update
 	sudo apt-get install indicator-synapse xdotool;
 
 	echo "1. 执行xdotool getmouselocation获取位置信息\r\n"

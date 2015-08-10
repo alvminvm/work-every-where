@@ -5,15 +5,7 @@ alias glg='git log --graph --decorate'
 alias glga='git log --graph --decorate --all'
 alias blog='cd ~/VirtualEnvs/Pelican/ && . bin/activate && cd zlv.me'
 alias blog-on='make html && make serve'
-alias cdg='cd ~/Git/MyMoneySms'
 alias coveragem='java -cp emma.jar emma merge '
 alias gitcafepagepush='git push gitcafe master:gitcafe-pages -f'
 alias gitstatus='git status'
-
-
-# PATH
-export ANDROID_HOME=/home/jeremyhe/Software/android-sdk-linux
-export JAVA_HOME=/home/jeremyhe/Software/jdk
-export ANDROID_STUDIO_HOME=/home/jeremyhe/Software/android-studio
-
-export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$JAVA_HOME/bin:$JAVA_HOME/jre/bin:$CMAKE_HOME/bin:$ANDROID_STUDIO_HOME/bin
+alias install='sudo apt-get install '
