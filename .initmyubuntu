@@ -24,18 +24,6 @@ install_chrome()
 	sudo -S $password apt-get install chromium-browser pepperflashplugin-nonfree
 }
 
-install_zsh()
-{
-	# install 
-	sudo -S $password apt-get install zsh autojump;
-	wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh
-	
-	# TODO: modify .zshrc
-	echo "add 'autojump' to plugins in .zshrc\r\n";
-	echo "add 'source ~/.sh_user'\r\n"
-
-}
-
 instal_synapse()
 {
     sudo add-apt-repository ppa:noobslab/apps && sudo apt-get update
