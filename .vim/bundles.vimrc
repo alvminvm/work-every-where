@@ -21,7 +21,7 @@ call vundle#begin()
 "     :PluginInstall     install 安装配置的插件
 "     :PluginInstall!    update  更新
 "     :PluginClean       remove plugin not in list 删除本地无用插件
-Plugin 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 
 
 
@@ -174,7 +174,7 @@ let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 " If you want :UltiSnipsEdit to split your window.
 "let g:UltiSnipsEditSplit="vertical"
 
-
+Plugin 'Shougo/vimshell.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
