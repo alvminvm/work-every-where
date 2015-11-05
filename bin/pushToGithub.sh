@@ -1,6 +1,6 @@
 #!/bin/sh
 
-git remote -v | grep -q github
+git remote -v | grep -q gisthub
 
 if [ $? ]; then
     msg=`date`
