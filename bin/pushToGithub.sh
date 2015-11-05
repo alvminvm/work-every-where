@@ -1,8 +1,6 @@
 #!/bin/sh
 
-git remote -v | grep -q gisthub
-
-if [ $? ]; then
+if git remote -v | grep -q github; then
     msg=`date`
     git add --all .
     git commit -a -m "$msg"
