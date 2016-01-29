@@ -174,7 +174,5 @@ let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 " If you want :UltiSnipsEdit to split your window.
 "let g:UltiSnipsEditSplit="vertical"
 
-Plugin 'Shougo/vimshell.vim'
-
 call vundle#end()            " required
 filetype plugin indent on    " required
