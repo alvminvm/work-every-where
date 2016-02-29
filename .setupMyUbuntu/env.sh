@@ -1,2 +1,2 @@
-export PWD=devandroid
+export PWD=l
 export TODO=~/TODO.md
