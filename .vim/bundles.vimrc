@@ -45,7 +45,7 @@ let g:tagbar_autofocus = 1
 
 
 " ########### Super Tab 采用Tab键自动补全 #####
-Plugin 'ervandew/supertab'	
+"Plugin 'ervandew/supertab'	
 
 
 
@@ -118,12 +118,6 @@ let g:multi_cursor_exit_from_insert_mode = 0
 " ########### Gundo ########### 
 Plugin 'sjl/gundo.vim'
 
-
-" ########### Vim-task ###########
-Plugin 'samsonw/vim-task'
-noremap <leader>cc :call Toggle_task_status()<CR>
-
-
 " ########### markdown ########### 
 Plugin 'plasticboy/vim-markdown'
 let g:vim_markdown_no_default_key_mappings=1
@@ -138,30 +132,30 @@ map <Leader>c<space> <plug>NERDCommenterToggle
 
 
 " ########### YCM 自动补全插件 ###########
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 " 在注释中也可以补全  
-let g:ycm_complete_in_comments=1  
+"let g:ycm_complete_in_comments=1  
 " 在字符串输入中也能补全
-let g:ycm_complete_in_strings = 1
+"let g:ycm_complete_in_strings = 1
 " 注释和字符串中的文字也会被收入补全
-let g:ycm_collect_identifiers_from_comments_and_strings = 0
+"let g:ycm_collect_identifiers_from_comments_and_strings = 0
 " mapping
 "nmap <leader>gd :YcmDiags<CR>
 "nnoremap <leader>gl :YcmCompleter GoToDeclaration<CR>           " 跳转到申明处
 "nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>            " 跳转到定义处
 "nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
 " 直接触发自动补全
-let g:ycm_key_invoke_completion = '<M-/>'
+"let g:ycm_key_invoke_completion = '<M-/>'
 " 黑名单,不启用
-let g:ycm_filetype_blacklist = {
-      \ 'tagbar' : 1,
-      \ 'gitcommit' : 1,
-      \}
+"let g:ycm_filetype_blacklist = {
+      "\ 'tagbar' : 1,
+      "\ 'gitcommit' : 1,
+      "\}
 " 输入第一个字符就开始补全  
 "let g:ycm_min_num_of_chars_for_completion=1
-let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-let g:SuperTabDefaultCompletionType = '<C-n>'
+"let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+"let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+"let g:SuperTabDefaultCompletionType = '<C-n>'
 
 
 " ############ SirVer/ultisnips	############## "
