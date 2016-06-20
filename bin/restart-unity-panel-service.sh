@@ -8,4 +8,5 @@ if [ $logFileSize -gt $maxLimitSize ]; then
 	pid=`ps -A | grep unity-panel-ser | awk '{ print $1 }'`	
 	kill $pid
 	notify-send "empty the trash."
+	echo "restart unity-panel-service \r\n" >> ~/bin/restart-service.log
 fi
