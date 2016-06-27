@@ -378,3 +378,7 @@ dev/
 *.zip
 *.me
 apktool
+.env
+ModuleTestReport
+monkeyreport
+mapping*
