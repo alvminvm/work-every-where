@@ -40,9 +40,8 @@ func! RunCompile()
 endfunc
 
 " 退格键直接进入插入模式，并删除
-nmap <BS> i<BS> 				
+"nmap <BS> i<BS> 				
 
-" TODO： 加上windows系统的
 ",ee 快速打开配置文件
 map <silent> <leader>ee :e ~/.vimrc<cr>	
 
