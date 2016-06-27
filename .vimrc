@@ -63,8 +63,8 @@ set whichwrap+=<,>,h,l		" 允许backspace和光标键跨越行边界
 set viminfo+=!				" 保存全局变量
 
 " 自动补全
-:inoremap " ""<ESC>i
-:inoremap ' ''<ESC>i
+":inoremap " ""<ESC>i
+":inoremap ' ''<ESC>i
 
 
 "==========================================
@@ -75,16 +75,14 @@ set t_Co=256				" force Vim into 256 color mode 强制使用256颜色，保证�
 
 winpos 400 100				" 设置启动时的位置
 
-set lines=48				" 设置启动时默认行数
+set lines=40				" 设置启动时默认行数
 
-set co=170					" 设置启动时默认列数
+set co=150					" 设置启动时默认列数
 
 if has('gui')
 	set guioptions-=T		" GUI隐藏工具栏
 	set guifont=Ubuntu\ Mono\ 12 " 设置字体
 endif
-
-" TODO: 启动时默认窗口大小
 
 set ruler					" show ruler 显示标尺
 
@@ -132,7 +130,7 @@ set tabstop=4     		" 设置Tab键的宽度
 set shiftwidth=4  		" 每一次缩进对应的空格数
 set softtabstop=4 		" 按退格键时可以一次删掉 4 个空格
 set smarttab      			" insert tabs on the start of a line according to shiftwidth, not tabstop
-"set noexpandtab				" 不要用空格代替制表符
+set noexpandtab				" 不要用空格代替制表符
 set shiftround    			" 缩进时，取整 use multiple of shiftwidth when indenting with '<' and '>'
 
 
