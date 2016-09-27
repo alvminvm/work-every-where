@@ -3,31 +3,15 @@ alias q="exit"
 alias c='clear'
 alias glg='git log --graph --decorate'
 alias glga='git log --graph --decorate --all'
-alias blog='cd ~/VirtualEnvs/Pelican/ && . bin/activate && cd zlv.me'
-alias blog-on='make html && make serve'
-alias coveragem='java -cp emma.jar emma merge '
-alias gitcafepagepush='git push gitcafe master:gitcafe-pages -f'
-alias gitstatus='git status'
-#alias git_custom_status='git status'
-alias install='sudo apt-get install '
-
-# using vim mode
-#bindkey -v
-
-#bindkey '^P' up-history
-#bindkey '^N' down-history
-#bindkey '^?' backward-delete-char
-#bindkey '^h' backward-delete-char
-#bindkey '^w' backward-kill-word
-#bindkey '^r' history-incremental-search-backward
-
-#function zle-line-init zle-keymap-select {
-    #VIM_PROMPT="%{$fg_bold[yellow]%} [% NORMAL]%  %{$reset_color%}"
-    ##RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/}$(git_custom_status) $EPS1"
-    #RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/} $EPS1"
-    #zle reset-prompt
-#}
-
-#zle -N zle-line-init
-#zle -N zle-keymap-select
-#export KEYTIMEOUT=1
+alias gitcore='cd $MMR_DEV_ROOT/ProjectManagement/script/devscript/gitscript'
+alias o='open .'
+alias lg44='ssh androidrb@192.168.1.44'
+alias lg18='ssh server1@192.168.1.18'
+alias lg8'ssh androiddev@192.168.1.8'
+alias gv='gvim'
+alias f='fuck'
+alias bmodcore='cd $MMR_DEV_ROOT/android/src/module/M2RModCore && ./gradlew modcore:clean modcore:publishAarPublicationToLocalRepository'
+alias bmodservice='cd $MMR_DEV_ROOT/android/src/module/M2RModService && ./gradlew modservice:clean modservice:uploadArchivesToLocalMaven'
+alias pl='adb -e pull'
+alias sl='ls'
+alias gitsh='gitcore'
