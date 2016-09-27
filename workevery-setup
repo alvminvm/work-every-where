@@ -1,2 +1,0 @@
-#!/bin/sh
-sudo add-apt-repository ppa:fcwu-tw/ppa && sudo apt-get update && sudo apt-get upgrade && sudo apt-get install ia32-libs gnome-session-fallback compizconfig-settings-manager nautilus-open-terminal fcitx git vim synapse privoxy multiget cmake python-dev build-essential  python-pip && sudo pip install shadowsocks

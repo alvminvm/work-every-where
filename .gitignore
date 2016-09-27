@@ -308,6 +308,17 @@ target/
 *.out
 *.app
 
+# mac 
+Applications
+Desktop
+Documents
+Library
+Movies
+Music
+Pictures
+Public
+
+# other
 .vim/bundle/
 .AndroidStudio*
 .Genymobile/
@@ -382,3 +393,26 @@ apktool
 ModuleTestReport
 monkeyreport
 mapping*
+.CFUserTextEncoding
+.DS_Store
+.ShadowsocksX/
+.bash_sessions/
+*/.DS_Store
+.emulator_console_auth_token
+.farbox/
+.freemind/
+.iterm2/
+.iterm2_shell_integration.zsh
+.node-gyp/
+.oracle_jre_usage/
+.sqlite_history
+.subversion/
+.workevery-setup
+Nexus 5X/
+Qt5.7.0/
+DevGroup
+Dropbox
+bin/makev38book.sh
+bin/verify.sh
+*.bdb
+*.sqlite

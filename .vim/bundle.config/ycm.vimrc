@@ -8,8 +8,8 @@ let g:ycm_complete_in_strings = 1
 let g:ycm_collect_identifiers_from_comments_and_strings = 1
 
 " mapping
-"nnoremap <leader>jl :YcmCompleter GoToDeclaration<CR>           " 跳转到申明处
-"nnoremap <leader>jf :YcmCompleter GoToDefinition<CR>            " 跳转到定义处
+nnoremap <leader>jl :YcmCompleter GoToDeclaration<CR>           " 跳转到申明处
+nnoremap <leader>jf :YcmCompleter GoToDefinition<CR>            " 跳转到定义处
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 let g:ycm_auto_trigger = 1
@@ -28,6 +28,6 @@ function! s:my_cr_function()
   return pumvisible() ? "\<C-y>\<ESC>a" : "\<CR>"
 endfunction
 
-"let g:ycm_add_preview_to_completeopt = 1
-"let g:ycm_autoclose_preview_window_after_completion = 1
-"let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_add_preview_to_completeopt = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_autoclose_preview_window_after_insertion = 1
