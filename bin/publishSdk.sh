@@ -1,1 +1,0 @@
-/home/androiddev/Workspace/core/src/AndroidInterface/Build/corebusiness/publish.sh

@@ -1,0 +1,16 @@
+#!/bin/bash
+if [ ! $1 ]; then
+	echo "usage: baksdk 3.9.0"
+	exit 0;	
+fi
+
+if [ -d $MMR_DEV_ROOT/$1 ]; then
+	rm -rf $MMR_DEV_ROOT/$1
+fi
+cp -R $MMR_DEV_ROOT/sdk $MMR_DEV_ROOT/$1
+
+if [ -d $MMR_DEV_ROOT/core/$1 ]; then
+	rm -rf $MMR_DEV_ROOT/core/$1
+fi
+cp -R $MMR_DEV_ROOT/core/install $MMR_DEV_ROOT/core/$1
+

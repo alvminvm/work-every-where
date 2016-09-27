@@ -1,8 +1,13 @@
 #!/bin/bash
 debug=true
-avdDbDir=`pwd | sed "s/\/home\/androiddev\/adbpull\//\/data\/data\/com.maimairen.app.jinchuhuo.dev\//g"`
+pkg=com.maimairen.app.jinchuhuo.dev
+if [ $1 ]; then
+	pkg=$1
+fi
+avdDbDir=`pwd | sed "s/.*\/databases/\/data\/data\/$pkg\/databases/g"`
 if [ debug ]; then
-	echo $dbDir;
+	echo packname: $pkg;
+	echo target dir: $avdDbDir;
 fi
 
 dbFileName=jinchuhuobook.bdb
@@ -14,4 +19,5 @@ adb -e shell chmod 777 $avdDbDir/$dbFileName
 
 echo "result:"
 adb -e shell ls -l $avdDbDir
+
 

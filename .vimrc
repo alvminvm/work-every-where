@@ -81,7 +81,7 @@ set co=150					" 设置启动时默认列数
 
 if has('gui')
 	set guioptions-=T		" GUI隐藏工具栏
-	set guifont=Ubuntu\ Mono\ 12 " 设置字体
+	"set guifont=Ubuntu\ Mono\ 12 " 设置字体
 endif
 
 set ruler					" show ruler 显示标尺
@@ -214,16 +214,17 @@ function! AutoSetFileHead()
 		call append(line(".")+2, "\#########################################################################") 
 		call append(line(".")+3, "\# File Name: ".expand("%"))
 		call append(line(".")+4, "\# Author: JeremyHe")
-		call append(line(".")+5, "\# mail: jeremyhe_cn@gmail.com")
+		call append(line(".")+5, "\# Email: jeremyhe.cn@gmail.com")
 		call append(line(".")+6, "\# Created Time: ".strftime("%c"))
+		call append(line(".")+6, "\# Descripteion: )
 		call append(line(".")+7, "\#########################################################################")
 	else 
 		call append(line("."), "")
 		call append(line(".")+1, "")
 		call append(line(".")+2, "/*************************************************************************")
-		call append(line(".")+3, "     File Name: ".expand("%"))
+		call append(line(".")+3, "   File Name: ".expand("%"))
 		call append(line(".")+4, "   Author: JeremyHe")
-		call append(line(".")+5, "   Mail: jeremyhe.cn@gmail.com")
+		call append(line(".")+5, "   Email: jeremyhe.cn@gmail.com")
 		call append(line(".")+6, "   Created Time: ".strftime("%c"))
 		call append(line(".")+7, " ************************************************************************/")
 	endif

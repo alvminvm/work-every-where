@@ -138,3 +138,6 @@ ab ww; <c-r>=GetWorkDateRange()<cr>
 ab fn; <c-r>=expand('%:p:t')<cr> 
 ab fp; <c-r>=expand('%:p')<cr> 
 
+" flow
+ab o; =>operation:
+imap <C-o> <Esc>ao; 
