@@ -1,0 +1,24 @@
+#!/bin/bash
+if [ ! $1 ]; then
+	echo "usage: restoresdk 3.9.0"
+	exit 0;	
+fi
+
+echo "before restore:"
+ls -l $MMR_DEV_ROOT/sdk
+if [ -d $MMR_DEV_ROOT/sdk ]; then
+	rm -rf $MMR_DEV_ROOT/sdk
+fi
+cp -R $MMR_DEV_ROOT/$1 $MMR_DEV_ROOT/sdk 
+
+ls -l $MMR_DEV_ROOT/core/install
+if [ -d $MMR_DEV_ROOT/core/install ]; then
+	rm -rf $MMR_DEV_ROOT/core/install
+fi
+cp -R $MMR_DEV_ROOT/core/$1 $MMR_DEV_ROOT/core/install 
+
+echo ""
+echo "after restore:"
+ls -l $MMR_DEV_ROOT/sdk
+ls -l $MMR_DEV_ROOT/core/install
+
