@@ -1,3 +1,4 @@
+export SH_USER
 # alias
 alias q="exit"
 alias c='clear'
