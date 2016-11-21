@@ -1,9 +1,9 @@
 "==========================================
 " Author:  JeremyHe
-" Version: 1.0
+" Version: 2.0
 " Email: jeremyhe.cn@gmail.com
-" Blog: http://www.J-Cn.me
-" Last_modify: 2015-04-14 20:23  
+" Blog: http://www.zlv.me
+" Last_modify: 2016-11-20 21:23  
 " Description: 一些有用的函数
 "==========================================
 

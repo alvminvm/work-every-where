@@ -2,8 +2,8 @@
 " Author:  JeremyHe
 " Version: 2.0
 " Email: jeremyhe.cn@gmail.com
-" Blog: http://zlv.me
-" Last_modify: 2015-06-10 15:36 
+" Blog: http://www.zlv.me
+" Last_modify: 2016-11-20 21:36 
 " Description: 独立出快捷键的设置
 "==========================================
 
@@ -38,9 +38,6 @@ func! RunCompile()
 		:!./%
 	endif
 endfunc
-
-" 退格键直接进入插入模式，并删除
-"nmap <BS> i<BS> 				
 
 ",ee 快速打开配置文件
 map <silent> <leader>ee :e ~/.vimrc<cr>	
@@ -92,8 +89,8 @@ nmap + <C-W>+
 " Go to home and end using capitalized directions 使用H和L跳到行首和行尾，原本H和L的功能废弃
 noremap H ^
 noremap L $
-imap HH <Esc>^i
-imap LL <Esc>$a
+imap HH <Esc>I
+imap LL <Esc>A
 
 " 分号快速进入命令模式
 nnoremap ; :

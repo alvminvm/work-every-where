@@ -2,8 +2,8 @@
 " Author:  JeremyHe
 " Version: 1.0
 " Email: jeremyhe.cn@gmail.com
-" Blog: http://www.J-Cn.me
-" Last_modify: 2015-04-15 12:09 
+" Blog: http://www.zlv.me
+" Last_modify: 2016-11-20 18:36 
 " Description: Vundle插件管理配置文件
 " Sections:
 "       -> Enable Vundle 启用Vundle插件
@@ -50,18 +50,15 @@ let g:NERDTreeMapOpenSplit = 's'
 let g:NERDTreeMapOpenVSplit = 'v'
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | end
 
-" ############# Git目录显示支持 #############"
-"Plugin 'Xuyuanp/git-NERDTree'
-
 " ############ Outline 标签导航 ###########
-Plugin 'majutsushi/tagbar'
-let g:tagbar_autofocus = 1	
+" Plugin 'majutsushi/tagbar'
+" let g:tagbar_autofocus = 1	
 
 
 " ######### markdown table support ###########
-Plugin 'dhruvasagar/vim-table-mode'
-let g:table_mode_corner = '|'
-let g:table_mode_delimiter = '  '
+" Plugin 'dhruvasagar/vim-table-mode'
+" let g:table_mode_corner = '|'
+" let g:table_mode_delimiter = '  '
 
 
 " ############ 主题 ########### 
@@ -76,13 +73,13 @@ let g:multi_cursor_exit_from_insert_mode = 0
 
 
 " ########### Gundo ########### 
-Plugin 'sjl/gundo.vim'
+" Plugin 'sjl/gundo.vim'
 
 " ########### markdown ########### 
-Plugin 'plasticboy/vim-markdown'
-let g:vim_markdown_no_default_key_mappings=1
-au BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn} nmap <F9> :Toc<CR>
-au BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn} imap <F9> <ESC>:Toc<CR>
+" Plugin 'plasticboy/vim-markdown'
+" let g:vim_markdown_no_default_key_mappings=1
+" au BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn} nmap <F9> :Toc<CR>
+" au BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn} imap <F9> <ESC>:Toc<CR>
 
 
 " ########### 快速注释 ########### 

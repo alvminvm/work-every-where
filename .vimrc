@@ -2,8 +2,8 @@
 " Author:  JeremyHe
 " Version: 1.0
 " Email: jeremyhe.cn@gmail.com
-" Blog: http://www.J-Cn.me
-" Last_modify: 2015-04-13 21:47  
+" Blog: http://www.zlv.me
+" Last_modify: 2016-11-20 21:47  
 " Sections:
 "       -> Initial Plugin 加载插件
 "       -> General Settings 基础设置
@@ -153,8 +153,12 @@ set termencoding=utf-8	" 这句只影响普通模式 (非图形界面) 下的 Vi
 " others 其它设置
 "==========================================
 
-autocmd! bufwritepost _vimrc source % 	" vimrc文件修改之后自动加载。 windows。
-autocmd! bufwritepost .vimrc source % 	" vimrc文件修改之后自动加载。 linux。
+if filereadable(expand("~/_vimrc"))
+	autocmd! bufwritepost _vimrc source % 	" vimrc文件修改之后自动加载。 windows。
+endif
+if filereadable(expand("~/.vimrc"))
+	autocmd! bufwritepost .vimrc source % 	" vimrc文件修改之后自动加载。 linux。
+endif
 
 set completeopt=longest,menu			" 让Vim的补全菜单行为与一般IDE一致(参考VimTip1228)
 
@@ -243,7 +247,7 @@ nnoremap <buffer> <F10> :exec '!python' shellescape(@%, 1)<cr>
 " Theme Settings  主题设置
 "==========================================
 syntax enable
-set background=dark
+set background=light
 let g:solarized_termcolors=256
 colorscheme solarized
 hi link EasyMotionTarget Search
