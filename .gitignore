@@ -417,3 +417,4 @@ bin/makev38book.sh
 bin/verify.sh
 *.bdb
 *.sqlite
+*.md
