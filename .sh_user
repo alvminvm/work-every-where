@@ -13,6 +13,8 @@ alias unix='date +%s'
 
 # mac
 if [ $SYSTEM = "Darwin" ]; then
+	alias gvim='/Applications/MacVim.app/Contents/MacOS/Vim -g'
+	alias vim='/Applications/MacVim.app/Contents/MacOS/Vim -g'
 	alias gv='gvim'
 	alias o='open .'
 fi
