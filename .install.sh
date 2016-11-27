@@ -3,6 +3,11 @@ SYSTEM=`uname`
 ROOT_DIR=`pwd`
 
 copy_git(){
+	cd ~
+	home_dir=`pwd`
+	if [ "$ROOT_DIR" == "$home_dir" ]; then
+		return 0;
+	fi
 	echo ">>> copy work-every-where to $HOME"
 	sudo cp -R ./ ~/
 
@@ -121,7 +126,20 @@ setup_zlv_me(){
 	
 	echo ""
 	echo ">>> setup zlv.me"
-		
+	git clone git@github.com:JeremyHe-cn/JeremyHe-cn.github.io.git -b source-hexo ~/Zlv.me
+	if ! type npm >dev/null 2>&1; then
+		echo ">>> install npm: https://nodejs.org/en/"
+		exit 1;
+	fi
+
+	cd ~/Zlv.me
+	npm install hexo-cli -g
+	npm install	
+	if [ ! -d ./themes ]; then 
+		mkdir themes
+	fi
+	npm install --save hexo-renderer-jade hexo-generator-feed hexo-generator-sitemap hexo-browsersync hexo-generator-archive
+	git clone git@github.com:JeremyHe-cn/hexo-theme-apollo.git themes/apollo
 }
 
 # main
