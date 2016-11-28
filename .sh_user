@@ -20,7 +20,7 @@ if [ $SYSTEM = "Darwin" ]; then
 fi
 
 # maimairen.com
-if [ "$MMR_DEV_ROOT" ]; then
+if [ `hostname` = "JeremydeiMac.local" ]; then
 	alias bmodcore='cd $MMR_DEV_ROOT/android/src/module/M2RModCore && ./gradlew modcore:clean modcore:uploadArchivesToLocalMaven'
 	alias bmodservice='cd $MMR_DEV_ROOT/android/src/module/M2RModService && ./gradlew modservice:clean modservice:uploadArchivesToLocalMaven'
 	alias biossdk='j mmrdb && ./buildios.sh&& j mmrcore && ./buildios.sh'
