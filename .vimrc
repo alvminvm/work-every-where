@@ -58,9 +58,9 @@ set noswapfile				" 关闭交换文件
 
 " Configure backspace so it acts as it should act
 "set backspace=eol,start,indent
-set whichwrap+=<,>,h,l		" 允许backspace和光标键跨越行边界
+" set whichwrap+=<,>,h,l		" 允许backspace和光标键跨越行边界
 
-set viminfo+=!				" 保存全局变量
+" set viminfo+=!				" 保存全局变量
 
 " 自动补全
 ":inoremap " ""<ESC>i
@@ -73,11 +73,11 @@ set viminfo+=!				" 保存全局变量
 
 set t_Co=256				" force Vim into 256 color mode 强制使用256颜色，保证在终端中能够正常显示
 
-winpos 400 100				" 设置启动时的位置
+" winpos 400 100				" 设置启动时的位置
 
-set lines=40				" 设置启动时默认行数
+" set lines=40				" 设置启动时默认行数
 
-set co=150					" 设置启动时默认列数
+" set co=150					" 设置启动时默认列数
 
 if has('gui')
 	set guioptions-=T		" GUI隐藏工具栏
