@@ -17,9 +17,6 @@ noremap <F1> <Esc>"
 " F5 执行或编译
 map <F5> :call RunCompile()<CR>	
 
-" F9 Outline 
-nmap <F9> :TagbarToggle<CR>
-
 " F12 缩进，格式化代码
 map <F12> gg=G					
 
@@ -51,11 +48,14 @@ nmap <leader>q :q!<cr>
 " Copy All 映射全选+复制 ctrl+a
 map <C-A> ggVG"+Y
 map! <C-A> <Esc>ggVG"+Y
-
 " Copy 选中状态下 Ctrl+c 复制
 vmap <C-c> "+y				
 " Past At Insert Mode 插入模式下Ctrl+v 粘贴剪贴板内容
 imap <C-v> <Esc>"+p<Esc>a	
+" 选中状态下粘贴
+vmap p "_xp
+" map 空格 为 " ，方便使用寄存器
+map <space> "
 
 "插入模式下Ctrl+B插入<br>
 imap <C-b> <br>
@@ -87,8 +87,10 @@ nmap - <C-W>-
 nmap + <C-W>+
 
 " Go to home and end using capitalized directions 使用H和L跳到行首和行尾，原本H和L的功能废弃
-noremap H ^
-noremap L $
+nnoremap H ^
+vnoremap H ^
+nnoremap L $
+vnoremap L $
 imap HH <Esc>I
 imap LL <Esc>A
 
