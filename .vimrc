@@ -102,7 +102,7 @@ autocmd InsertLeave * se nocul  " 离开插入模式时取消高亮
 autocmd InsertEnter * se cul    " 进入插入模式时用浅色高亮当前行  
 
 " statusline settings 状态行显示的内容 
-"set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%Y/%m/%d\ -\ %H:%M\")}    
+" set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%Y/%m/%d\ -\ %H:%M\")}    
 set laststatus=2    		" 启动显示状态行(1),总是显示状态行(2)  
 
 "设置文内智能搜索提示
@@ -220,8 +220,8 @@ function! AutoSetFileHead()
 		call append(line(".")+4, "\# Author: JeremyHe")
 		call append(line(".")+5, "\# Email: jeremyhe.cn@gmail.com")
 		call append(line(".")+6, "\# Created Time: ".strftime("%c"))
-		call append(line(".")+6, "\# Descripteion: )
-		call append(line(".")+7, "\#########################################################################")
+		call append(line(".")+7, "\# Descripteion: ")
+		call append(line(".")+8, "\#########################################################################")
 	else 
 		call append(line("."), "")
 		call append(line(".")+1, "")

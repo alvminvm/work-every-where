@@ -419,3 +419,4 @@ bin/verify.sh
 *.sqlite
 *.md
 *.local*
+*.sql
