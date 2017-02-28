@@ -422,3 +422,4 @@ bin/verify.sh
 *.sql
 .ShadowsocksX*
 .bin/check*
+.filezilla
