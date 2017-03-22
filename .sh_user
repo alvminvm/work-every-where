@@ -21,7 +21,7 @@ fi
 
 # maimairen.com
 if [ `hostname` = "JeremydeiMac.local" ]; then
-	alias bmodcore='cd $MMR_DEV_ROOT/android/src/module/M2RModCore && ./gradlew modcore:clean modcore:execJavaH modcore:uploadJarArchives modcore:uploadArchivesToLocalMaven'
+	alias bmodcore='cd $MMR_DEV_ROOT/android/src/module/M2RModCore && ./gradlew modcore:clean modcore:execJavaH modcore:uploadArchivesToLocalMaven'
 	alias rmodcore='j modcore && ./gradlew modcore:uploadArchives'
 	alias bmodservice='cd $MMR_DEV_ROOT/android/src/module/M2RModService && ./gradlew modservice:clean modservice:uploadArchivesToLocalMaven'
 	alias bwebserver='cd $MMR_DEV_ROOT/android/src/module/M2RModService && ./gradlew webserver:clean webserver:uploadArchivesToLocalMaven'
