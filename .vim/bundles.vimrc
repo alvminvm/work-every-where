@@ -30,6 +30,7 @@ source ~/.vim/bundle.config/easymotion.vimrc
 " ############ YCM 自动补全 ########"
 "source ~/.vim/bundle.config/neocomplete.vimrc
 source ~/.vim/bundle.config/ycm.vimrc
+"source ~/.vim/bundle.config/mucomplete.vimrc
 
 " ########## ctrlp 文件搜索 ######
 source ~/.vim/bundle.config/ctrlp.vimrc
@@ -51,20 +52,14 @@ let g:NERDTreeMapOpenVSplit = 'v'
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | end
 
 " ############ Outline 标签导航 ###########
-" Plugin 'majutsushi/tagbar'
-" let g:tagbar_autofocus = 1	
-
-
-" ######### markdown table support ###########
-" Plugin 'dhruvasagar/vim-table-mode'
-" let g:table_mode_corner = '|'
-" let g:table_mode_delimiter = '  '
-
+Plugin 'majutsushi/tagbar'
+let g:tagbar_autofocus = 1	
+nmap <F8> :TagbarToggle<CR>
+"let g:tagbar_ctags_bin = ''
 
 " ############ 主题 ########### 
 Plugin 'altercation/vim-colors-solarized'
 let g:solarized_termcolors=256
-
 
 " ########### 多光标 ########### 
 Plugin 'terryma/vim-multiple-cursors'
@@ -76,10 +71,7 @@ let g:multi_cursor_exit_from_insert_mode = 0
 " Plugin 'sjl/gundo.vim'
 
 " ########### markdown ########### 
-" Plugin 'plasticboy/vim-markdown'
-" let g:vim_markdown_no_default_key_mappings=1
-" au BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn} nmap <F9> :Toc<CR>
-" au BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn} imap <F9> <ESC>:Toc<CR>
+source ~/.vim/bundle.config/markdown.vimrc
 
 
 " ########### 快速注释 ########### 
