@@ -3,26 +3,28 @@ SYSTEM=`uname -s`
 # alias
 alias q="exit"
 alias c='clear'
-alias glg='git log --graph --decorate'
-alias glga='git log --graph --decorate --all'
+#alias glga='git log --graph --decorate --all'
+alias glga='glgga'
 alias f='fuck'
 alias pl='adb -e pull'
 alias sl='ls'
 alias gitsh='gitcore'
 alias unix='date +%s'
+alias v='vim'
+alias gv='gvim'
 
 # mac
 if [ $SYSTEM = "Darwin" ]; then
-	alias gvim='/Applications/MacVim.app/Contents/MacOS/Vim -g'
-	alias vim='/Applications/MacVim.app/Contents/MacOS/Vim -g'
-	alias gv='gvim'
+	alias gvim='mvim'
 	alias o='open .'
 fi
 
 # maimairen.com
 if [ `hostname` = "JeremydeiMac.local" ]; then
 	alias bmodcore='cd $MMR_DEV_ROOT/android/src/module/M2RModCore && ./gradlew modcore:clean modcore:uploadArchivesToLocalMaven'
+	alias rmodcore='j modcore && ./gradlew modcore:uploadArchives'
 	alias bmodservice='cd $MMR_DEV_ROOT/android/src/module/M2RModService && ./gradlew modservice:clean modservice:uploadArchivesToLocalMaven'
+	alias bwebserver='cd $MMR_DEV_ROOT/android/src/module/M2RModService && ./gradlew webserver:clean webserver:uploadArchivesToLocalMaven'
 	alias biossdk='j mmrdb && ./buildios.sh&& j mmrcore && ./buildios.sh'
 	alias bosxsdk='j mmrdb && ./buildosx.sh&& j mmrcore && ./buildosx.sh'
 	alias gitcore='cd $MMR_DEV_ROOT/ProjectManagement/script/devscript/gitscript'
