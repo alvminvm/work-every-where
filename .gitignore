@@ -420,3 +420,6 @@ bin/verify.sh
 *.md
 *.local*
 *.sql
+.ShadowsocksX*
+.bin/check*
+.filezilla

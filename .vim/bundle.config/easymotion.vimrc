@@ -1,4 +1,5 @@
 Plugin 'Lokaltog/vim-easymotion'
+nmap f <Plug>(easymotion-s)
 nmap <Leader>f <Plug>(easymotion-s)
 nmap <Leader><Leader>f <Plug>(easymotion-s2)
 map <Leader>j <Plug>(easymotion-j)
