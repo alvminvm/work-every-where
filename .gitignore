@@ -423,3 +423,5 @@ bin/verify.sh
 .ShadowsocksX*
 .bin/check*
 .filezilla
+.zenmap
+.zprofile
