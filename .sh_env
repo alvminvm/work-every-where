@@ -1,8 +1,6 @@
 export MMR_DEV_ROOT=~/Workspace
 export ANDROID_HOME=~/Library/Android/sdk
 export ANDROID_NDK_HOME=$ANDROID_HOME/ndk-bundle
-#export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_112-release/Contents/Home
 
 export QT_HOME=/Users/jeremyhe/Qt5.7.0/5.7
 export ANDROID_HOME=/Users/jeremyhe/Library/Android/sdk
@@ -14,6 +12,13 @@ export JDK_HOME=$JAVA_HOME
 export LCOV_HOME=~/Applications/lcov
 
 export DYLD_FRAMEWORK_PATH=$QT_HOME/clang_64/lib
-export PATH=$PATH:~/.bin:$ANDROID_HOME/tools:$ANDROID_HOME/build-tools:$ANDROID_HOME/platform-tools:$ANDROID_NDK_HOME:$JAVA_HOME/bin:$LCOV_HOME/bin
 
+if [ `hostname` = 'JeremydeMacBook-Pro.local' ]; then
+	export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home
+else
+	# set default config
+	export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_112-release/Contents/Home
+fi
+
+export PATH=$PATH:~/.bin:$ANDROID_HOME/tools:$ANDROID_HOME/build-tools:$ANDROID_HOME/platform-tools:$ANDROID_NDK_HOME:$JAVA_HOME/bin:$LCOV_HOME/bin
 

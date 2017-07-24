@@ -3,19 +3,19 @@ SYSTEM=`uname -s`
 # alias
 alias q="exit"
 alias c='clear'
-alias glg='git log --graph --decorate'
-alias glga='git log --graph --decorate --all'
+#alias glga='git log --graph --decorate --all'
+alias glga='glgga'
 alias f='fuck'
 alias pl='adb -e pull'
 alias sl='ls'
 alias gitsh='gitcore'
 alias unix='date +%s'
+alias v='vim'
+alias gv='gvim'
 
 # mac
 if [ $SYSTEM = "Darwin" ]; then
 	alias gvim='mvim'
-	alias vim='mvim'
-	alias gv='gvim'
 	alias o='open .'
 fi
 
