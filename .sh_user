@@ -12,6 +12,7 @@ alias gitsh='gitcore'
 alias unix='date +%s'
 alias v='vim'
 alias gv='gvim'
+alias nv='nvim'
 
 # mac
 if [ $SYSTEM = "Darwin" ]; then

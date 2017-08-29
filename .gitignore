@@ -425,3 +425,6 @@ bin/verify.sh
 .filezilla
 .zenmap
 .zprofile
+.mysql_history
+.oni
+token
