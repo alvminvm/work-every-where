@@ -11,3 +11,8 @@ if [ ! -f ~/.ideavimrc ]; then
     echo "source $WEW_PATH/vim/hotkey.vimrc" >> ./.ideavimrc
     echo "source $WEW_PATH/ideavimrc" >> ./.ideavimrc
 fi
+
+if [ ! -f ~/.vscodevimrc ]; then
+    echo "source $WEW_PATH/vim/hotkey.vimrc" >> ./.vscodevimrc
+    echo "nmap f <leader><leader>s" >> ./.vscodevimrc
+fi
