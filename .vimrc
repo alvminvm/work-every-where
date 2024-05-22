@@ -27,8 +27,8 @@ let g:mapleader=','
 "==========================================
 
 " install Vundle bundles 安装Vundle插件管理
-if filereadable(expand("~/.vim/bundles.vimrc"))
-  source ~/.vim/bundles.vimrc
+if filereadable(expand("$WEW_PATH/vim/bundles.vimrc"))
+  source $WEW_PATH/vim/bundles.vimrc
 endif
 
 
@@ -154,10 +154,10 @@ set termencoding=utf-8	" 这句只影响普通模式 (非图形界面) 下的 Vi
 " others 其它设置
 "==========================================
 
-if filereadable(expand("~/_vimrc"))
+if filereadable(expand("$WEW_PATH/_vimrc"))
 	autocmd! bufwritepost _vimrc source % 	" vimrc文件修改之后自动加载。 windows。
 endif
-if filereadable(expand("~/.vimrc"))
+if filereadable(expand("$WEW_PATH/vimrc"))
 	autocmd! bufwritepost .vimrc source % 	" vimrc文件修改之后自动加载。 linux。
 endif
 
@@ -175,8 +175,8 @@ inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
 "==========================================
 " HotKey Settings  自定义快捷键设置
 "==========================================
-if filereadable(expand("~/.vim/hotkey.vimrc"))
-  source ~/.vim/hotkey.vimrc
+if filereadable(expand("$WEW_PATH/vim/hotkey.vimrc"))
+  source $WEW_PATH/vim/hotkey.vimrc
 endif
 
 
@@ -254,8 +254,8 @@ hi link EasyMotionShade Comment
 "==========================================
 " Function 一些有用的函数
 "==========================================
-if filereadable(expand("~/.vim/func.vimrc"))
-    source ~/.vim/func.vimrc
+if filereadable(expand("$WEW_PATH/vim/func.vimrc"))
+    source $WEW_PATH/vim/func.vimrc
 endif
 
 

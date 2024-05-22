@@ -25,24 +25,24 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'L9'
 
 " ######### easymotion 快速导航 ########
-source ~/.vim/bundle.config/easymotion.vimrc
+source $WEW_PATH/vim/bundle.config/easymotion.vimrc
 
-" ############ YCM 自动补全 ########"
-"source ~/.vim/bundle.config/neocomplete.vimrc
-source ~/.vim/bundle.config/ycm.vimrc
-"source ~/.vim/bundle.config/mucomplete.vimrc
+" ############ 自动补全 ########"
+" source $WEW_PATH/vim/bundle.config/neocomplete.vimrc
+source $WEW_PATH/vim/bundle.config/ycm.vimrc
+"source $WEW_PATH/vim/bundle.config/mucomplete.vimrc
 
 " ########## ctrlp 文件搜索 ######
-source ~/.vim/bundle.config/ctrlp.vimrc
+source $WEW_PATH/vim/bundle.config/ctrlp.vimrc
 
 " ############# FuzzyFinder #########
-source ~/.vim/bundle.config/fuzzyfinder.vimrc
+source $WEW_PATH/vim/bundle.config/fuzzyfinder.vimrc
 
 " ###### LeaderF ###########
 "Plugin 'Yggdroot/LeaderF'
 
 " ########## airline 状态栏增强 ########
-source ~/.vim/bundle.config/airline.vimrc
+source $WEW_PATH/vim/bundle.config/airline.vimrc
 
 " ############# 目录导航 ###########
 " ,n 打开目录
@@ -74,7 +74,7 @@ let g:multi_cursor_exit_from_insert_mode = 0
 " Plugin 'sjl/gundo.vim'
 
 " ########### markdown ########### 
-source ~/.vim/bundle.config/markdown.vimrc
+source $WEW_PATH/vim/bundle.config/markdown.vimrc
 
 
 " ########### 快速注释 ########### 

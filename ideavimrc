@@ -1,5 +1,3 @@
-source ~/.vim/hotkey.vimrc
-
 " Press `f` to activate AceJump
 "nmap f :action AceAction<CR>
 " Press `F` to activate Target Mode
