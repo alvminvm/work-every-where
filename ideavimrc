@@ -14,3 +14,6 @@ unmap <S-CR>
 " stirng manipulation
 vmap _ <action>(StringManipulation.ToSnakeCase)
 vmap - <action>(StringManipulation.ToKebabCase)
+
+" 使用 idea 的 join 功能。例如自动移除大括号 
+set ideajoin
