@@ -76,6 +76,16 @@ install_localrc(){
 	fi
 }
 
+install_main(){
+	has_localrc=`cat ~/.zshrc | grep main.sh`
+	if [ ! "$has_localrc" ]; then
+		echo ">>> config work-every-where"
+		echo "" >> ~/.zshrc
+		echo "# source main.sh" >> ~/.zshrc
+		echo "test -e $ROOT_DIR/main.sh && source $ROOT_DIR/main.sh" >> ~/.zshrc
+	fi
+}
+
 install_shell_integration(){
 	has_iterm2=`cat ~/.zshrc | grep iterm2`
 	if [ ! "$has_iterm2" ]; then
@@ -111,6 +121,7 @@ config_vim(){
 	fi
 
 	echo ">>> config vim"
+	ln -s ~/.vimrc $ROOT_DIR/.vimrc
 	if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
 		git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 	fi
@@ -124,14 +135,14 @@ config_vim(){
 }
 
 # main
-read -p "Enter ur name(JeremyHe): " username
+read -p "Enter ur name(al): " username
 if [ ! "$username" ]; then
-	username="JeremyHe"
+	username="al"
 fi
 
-read -p "Enter ur email(jeremyhe.cn@gmail.com): " email
+read -p "Enter ur email(alvminvm@qq.com): " email
 if [ ! "$email" ]; then
-	email="jeremyhe.cn@gmail.com"
+	email="alvminvm@qq.com"
 fi
 
 sudo echo ">> start install"
