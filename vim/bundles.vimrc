@@ -28,9 +28,9 @@ Plugin 'L9'
 source $WEW_PATH/vim/bundle.config/easymotion.vimrc
 
 " ############ 自动补全 ########"
-" source $WEW_PATH/vim/bundle.config/neocomplete.vimrc
-source $WEW_PATH/vim/bundle.config/ycm.vimrc
-"source $WEW_PATH/vim/bundle.config/mucomplete.vimrc
+source $WEW_PATH/vim/bundle.config/neocomplete.vimrc
+"source $WEW_PATH/vim/bundle.config/ycm.vimrc
+" source $WEW_PATH/vim/bundle.config/mucomplete.vimrc
 
 " ########## ctrlp 文件搜索 ######
 source $WEW_PATH/vim/bundle.config/ctrlp.vimrc

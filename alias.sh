@@ -30,5 +30,5 @@ if [ $SYSTEM = "Darwin" ]; then
     alias lsusb='system_profiler SPUSBDataType'
 
 	# ndk
-	alias addr2line='$ANDROID_NDK_HOME/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/aarch64-linux-android-addr2line -C -f -e'
+	alias addr2line='$ANDROID_NDK_PATH/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin/aarch64-linux-android-addr2line -C -f -e'
 fi
