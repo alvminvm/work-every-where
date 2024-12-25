@@ -71,6 +71,16 @@ install_main(){
 	fi
 }
 
+insall_pod() {
+	if type pod >/dev/null 2>&1; then
+		echo ">>> pod has installed"
+	else
+		echo ">>> install pod"
+		brew install ruby
+		gem install cocoapods --user-install
+	fi
+}
+
 config_git(){
 	echo ">>> config git"
 	git config --global user.name $username
@@ -125,6 +135,7 @@ install_brew;
 install_localrc;
 install_ohmyzsh;
 install_main;
+insall_pod;
 config_git;
 config_vim;
 echo ">> install finish"
