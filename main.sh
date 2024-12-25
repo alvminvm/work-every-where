@@ -5,6 +5,7 @@ cd $cur_dir
 export WEW_PATH=$work_dir
 export PATH="$work_dir/bin:$PATH"
 
+source $work_dir/path.sh
 source $work_dir/alias.sh
 
 if [ ! -f ~/.ideavimrc ]; then
