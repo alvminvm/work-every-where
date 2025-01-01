@@ -17,3 +17,6 @@ export PATH=$GEM_HOME/ruby/3.3.0/bin:$PATH
 # android
 export ANDROID_HOME=~/Library/Android/sdk
 export PATH=$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$PATH
+
+# go
+export PATH="$PATH:$(go env GOPATH)/bin"
