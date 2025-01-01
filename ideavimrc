@@ -17,3 +17,6 @@ vmap - <action>(StringManipulation.ToKebabCase)
 
 " 使用 idea 的 join 功能。例如自动移除大括号 
 set ideajoin
+
+" 使用 functiontextobj 插件
+set functiontextobj
